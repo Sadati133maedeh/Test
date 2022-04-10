@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;CVariablesDefinition&apos;" deleteContents="false" description="Delete resource &apos;CVariablesDefinition&apos;" element1="/CVariablesDefinition" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1633158705591"/>&#x0A;<refactoring comment="Rename resource &apos;CenterVarDefinition&apos; to &apos;CenterVarDef&apos;" description="Rename resource &apos;CenterVarDefinition&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/CenterVarDefinition" name="CenterVarDef" stamp="1633159718938" updateReferences="true"/>
+</session>

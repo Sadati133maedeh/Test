@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\m.sadati.PAYVAND.000\eclipse-workspace\CIS_Mollahasani\src\test\java\TestCase\TestCaseAddClinicService.java"/>
+			<item value="C:\Users\m.sadati.PAYVAND.000\eclipse-workspace\CenterDefinition\src\test\java\CenterPackage\CenterTest.java"/>
+			<item value="C:\Users\m.sadati.PAYVAND.000\eclipse-workspace\CVDefinition\pom.xml"/>
+			<item value="C:\Users\m.sadati.PAYVAND.000\eclipse-workspace\CenterDefinition"/>
+			<item value="C:\Users\m.sadati.PAYVAND.000\eclipse-workspace\App Definition"/>
+			<item value="C:\Users\m.sadati.PAYVAND.000\eclipse-workspace\project2\src\test\java\project7\project8.java"/>
+			<item value="C:\Users\m.sadati.PAYVAND.000\eclipse-workspace\SadatiProject"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="CIS_Sadati"/>
+			<item value="CIS_Mollahasani"/>
+			<item value="CenterApp"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="CIS_Sadati"/>
+			<item value="CIS_Mollahasani"/>
+			<item value="CenterApp"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+			<item value="https://builds.apache.org/view/M-R/view/Maven/job/maven-box/"/>
+		</list>
+		<list key="ciManagementSystem">
+			<item value="Jenkins"/>
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>
