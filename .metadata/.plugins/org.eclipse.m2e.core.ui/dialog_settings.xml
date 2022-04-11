@@ -51,6 +51,8 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="EPD2"/>
+			<item value="EPD"/>
 			<item value="CIS_Sadati"/>
 			<item value="CIS_Mollahasani"/>
 			<item value="CenterApp"/>
@@ -58,6 +60,8 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="EPD2"/>
+			<item value="EPD"/>
 			<item value="CIS_Sadati"/>
 			<item value="CIS_Mollahasani"/>
 			<item value="CenterApp"/>
