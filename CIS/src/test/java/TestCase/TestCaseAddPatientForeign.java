@@ -11,6 +11,8 @@ import pageObject.PageObject_ListPatient;
 import pageObject.PageObject_MainMenu;
 
 import org.testng.annotations.BeforeMethod;
+
+import java.awt.Desktop.Action;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -60,19 +62,22 @@ public class TestCaseAddPatientForeign {
 	  driver.switchTo().window(window);
 	  }
 	 
-     Thread.sleep(500);
-     WebElement meliat= driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[2]/div[5]/kendo-combobox/span/kendo-searchbar/input"));
-	 meliat.click();
-	 meliat.clear();
-	 meliat.click();
-     Thread.sleep(1000);
-     meliat.sendKeys(Meliat);
-     meliat.sendKeys(Keys.DOWN);
-     meliat.sendKeys(Keys.ENTER);
+	 Actions action = new Actions(driver);
 
-     Thread.sleep(500);
-    driver.findElement(By.name("PassportNumber")).sendKeys(Passport);
-		 
+	WebElement meliat= driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[2]/div[5]/kendo-combobox/span/kendo-searchbar/input"));
+	meliat.click();
+	meliat.clear();
+	Thread.sleep(1000);
+	meliat.click();
+	Thread.sleep(500);
+	action
+	.sendKeys(meliat, Meliat)
+	.perform();
+	Thread.sleep(1000);
+	WebElement passport= driver.findElement(By.name("PassportNumber"));
+	passport.sendKeys(Passport);
+	Thread.sleep(1000);
+
  
 	 //AddPatient
       PageObject_AddPatient sick = PageFactory.initElements(driver, PageObject_AddPatient.class);
@@ -86,7 +91,7 @@ public class TestCaseAddPatientForeign {
 	  }
 	  //CheckAddPatient
       PageObject_ListPatient CheckAdd = PageFactory.initElements(driver, PageObject_ListPatient.class);
-      CheckAdd.Search_Patient_melicode(driver, Passport);
+      CheckAdd.Search_Patient_Passport(driver, Meliat, Passport);
       
       WebElement Gridmelicode=  driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-patient-list/div/app-patient-search/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr/td[2]"));
       Thread.sleep(2000);
@@ -99,7 +104,7 @@ public class TestCaseAddPatientForeign {
   }
   @BeforeMethod
   public void beforeMethod() throws InterruptedException {
-	  System.setProperty("webdriver.chrome.driver", "E:\\Automation Test\\Selenium WebDriver\\Tools\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "./src/test/resources/driver/chromedriver.exe");
 	  driver = new ChromeDriver();
 	  
 	  	

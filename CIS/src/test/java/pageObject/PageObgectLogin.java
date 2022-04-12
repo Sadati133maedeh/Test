@@ -45,7 +45,7 @@ public class PageObgectLogin {
 	    Thread.sleep(2000);
 	    driver.findElement(By.xpath("/html/body/div[2]/div[3]/div[1]/div/div/span")).click();
 		driver.switchTo().defaultContent();
-		Thread.sleep(50000);
+		Thread.sleep(60000);
 		
     	eh.highlightElement(driver, loginbutton);
 		loginbutton.click();

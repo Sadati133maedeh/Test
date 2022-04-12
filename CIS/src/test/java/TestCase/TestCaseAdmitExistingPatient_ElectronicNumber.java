@@ -91,13 +91,13 @@ public class TestCaseAdmitExistingPatient_ElectronicNumber {
   @BeforeMethod
   public void beforeMethod() throws InterruptedException {
 	  
-	  System.setProperty("webdriver.chrome.driver", "E:\\Automation Test\\Selenium WebDriver\\Tools\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "./src/test/resources/driver/chromedriver.exe");
 	  driver = new ChromeDriver(); 
   }
 
   @AfterMethod
   public void afterMethod() {
-		//driver.quit();
+		driver.quit();
   }
 
 }

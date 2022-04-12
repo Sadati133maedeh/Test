@@ -27,8 +27,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
 public class TestCaseAddClinicService {
- 
-    
+
+      
       WebDriver driver;
 
 
@@ -69,7 +69,7 @@ public class TestCaseAddClinicService {
   
   @BeforeMethod
   public void beforeMethod() throws InterruptedException {
-	  System.setProperty("webdriver.chrome.driver", "E:\\Automation Test\\Selenium WebDriver\\Tools\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "./src/test/resources/driver/chromedriver.exe");
 	  driver = new ChromeDriver();
 	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);  
 	  

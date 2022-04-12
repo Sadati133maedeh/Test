@@ -16,7 +16,7 @@ public class DataProviders {
 	@DataProvider(name = "Login")
 	public Iterator<Object[]> Login () throws IOException{
 		CSVReader reader = new CSVReader(
-				new FileReader("C:\\Users\\m.sadati.PAYVAND.000\\eclipse-workspace\\CIS_Mollahasani\\src\\test\\resources\\data\\CSVFile\\Login.csv"),',','\'',1);
+				new FileReader("./src/test/resources/data/CSVFile/Login.csv"),',','\'',1);
 		List<Object[]> myEntries = new ArrayList<Object[]>();
 		String[] nextLine;
 		while ((nextLine=reader.readNext())!=null) {
@@ -31,7 +31,7 @@ public class DataProviders {
 	@DataProvider(name = "AddPationesPersian")
 	public Iterator<Object[]> AddPationesPersian() throws IOException{
 		CSVReader reader = new CSVReader(
-				new FileReader("C:\\Users\\m.sadati.PAYVAND.000\\eclipse-workspace\\CIS_Mollahasani\\src\\test\\resources\\data\\CSVFile\\AddPationesPersian.csv"),',','\'',1);
+				new FileReader("./src/test/resources/data/CSVFile/AddPationesPersian.csv"),',','\'',1);
 		List<Object[]> myEntries = new ArrayList<Object[]>();
 		String[] nextLine;
 		while ((nextLine=reader.readNext())!=null) {
@@ -44,7 +44,7 @@ public class DataProviders {
 	@DataProvider(name = "AddPationesForeign")
 	public Iterator<Object[]> AddPationesForeign() throws IOException{
 		CSVReader reader = new CSVReader(
-				new FileReader("C:\\Users\\m.sadati.PAYVAND.000\\eclipse-workspace\\CIS_Mollahasani\\src\\test\\resources\\data\\CSVFile\\AddPationesForeign.csv"),',','\'',1);
+				new FileReader("./src/test/resources/data/CSVFile/AddPationesForeign.csv"),',','\'',1);
 		List<Object[]> myEntries = new ArrayList<Object[]>();
 		String[] nextLine;
 		while ((nextLine=reader.readNext())!=null) {
@@ -57,7 +57,7 @@ public class DataProviders {
 	@DataProvider(name = "AdmitData")
 	public Iterator<Object[]> AdmitData() throws IOException{
 		CSVReader reader = new CSVReader(
-				new FileReader("C:\\Users\\m.sadati.PAYVAND.000\\eclipse-workspace\\CIS_Mollahasani\\src\\test\\resources\\data\\CSVFile\\AdmitData.csv"),',','\'',1);
+				new FileReader("./src/test/resources/data/CSVFile/AdmitData.csv"),',','\'',1);
 		List<Object[]> myEntries = new ArrayList<Object[]>();
 		String[] nextLine;
 		while ((nextLine=reader.readNext())!=null) {
@@ -70,7 +70,7 @@ public class DataProviders {
 	@DataProvider(name = "AddPationesPersianInAdmit")
 	public Iterator<Object[]> AddPationesPersianInAdmit () throws IOException{
 		CSVReader reader = new CSVReader(
-				new FileReader("C:\\Users\\m.sadati.PAYVAND.000\\eclipse-workspace\\CIS_Mollahasani\\src\\test\\resources\\data\\CSVFile\\AddPationesPersian&Admit.csv"),',','\'',1);
+				new FileReader("./src/test/resources/data/CSVFile/AddPationesPersian&Admit.csv"),',','\'',1);
 		List<Object[]> myEntries = new ArrayList<Object[]>();
 		String[] nextLine;
 		while ((nextLine=reader.readNext())!=null) {

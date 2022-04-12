@@ -27,8 +27,10 @@ public class PageObgect_AddClinicService{
     @FindBy(xpath="")
 	WebElement clinicNameSearch;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-service/div/div/div[2]/app-clinic-single/div/div[2]/div[2]/div/div[1]/div/mat-checkbox/label/div")
+    
+    @FindBy(xpath="//input[@id='mat-checkbox-1-input']")
 	WebElement clinicCheckbox;
+
     
     @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-service/div/div/div[3]/app-services/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[2]/td[4]")
 	WebElement serviceName;

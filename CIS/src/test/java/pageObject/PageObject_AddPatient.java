@@ -308,11 +308,12 @@ public class PageObject_AddPatient {
 		      eh.unhighlightLast(driver, birthdate);
 		      
 		      //mahal tavalod
-		      eh.highlightElement(driver, mahaltavalod);
+		    WebElement birthPlace= driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[3]/div[5]/input"));
+		      eh.highlightElement(driver, birthPlace);
 		      Thread.sleep(500);
-		      action.click(mahaltavalod).perform();
+		      action.click(birthPlace).perform();
 		      action.sendKeys(Mahaltavalod).perform();
-		 	  eh.unhighlightLast(driver, mahaltavalod);
+		 	  eh.unhighlightLast(driver, birthPlace);
 		 	  
 		 	      		  
     		  //city
@@ -342,43 +343,6 @@ public class PageObject_AddPatient {
     	      eMAIL.sendKeys(Email);
     	      eh.unhighlightLastB(driver, eMAIL);
     	      
-    	      //Bime
-    	      eh.highlightElement(driver, bime);
-    	      Thread.sleep(500);
-    	      action.click(bime).perform();
-    	      action.sendKeys(BIME).perform();
-    	      eh.unhighlightLast(driver, bime);
-    	      
-
-    	      //BimeCode
-    	      int y= (int)(Math.random()*10000000);
-    	      WebElement BIMECODE=driver.findElement(By.name("InsuranceNo"));
-    	      eh.highlightElement(driver, BIMECODE);
-    	      Thread.sleep(500);
-    	      BIMECODE.sendKeys("1"+y);
-    	      eh.unhighlightLastB(driver, BIMECODE);
-
-    	      //BimeDate
-    	      eh.highlightElement(driver, bimedate);
-    	      Thread.sleep(500);
-    	      bimedate.sendKeys(BIMEDATE);
-    	      eh.unhighlightLast(driver, bimedate);
-
-    	      //Nesbat
-    	     eh.highlightElement(driver, nesbat);
-    	     Thread.sleep(500);
-    	     action.click(nesbat).perform();
-    	     action.sendKeys(NESBAT).perform();
-    	      eh.unhighlightLast(driver, nesbat);
-    	      Thread.sleep(500);
-
-    	      //OldId
-    	      eh.highlightElement(driver, oldId);
-    	      Thread.sleep(500);
-    	      eMAIL.sendKeys(OLDID);
-    	      eh.unhighlightLastB(driver,oldId );
-
-
     	      //Sabt
     	      eh.highlightElement(driver, Sabt);
     	      Thread.sleep(500);
