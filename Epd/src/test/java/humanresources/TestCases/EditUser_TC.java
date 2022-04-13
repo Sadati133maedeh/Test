@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import com.opencsv.CSVReader;
 
-import epd.pageObject.SerchUser;
+import humanresources.pageObjects.SerchUser;
 import humanresources.pageObjects.EditUser;
 import humanresources.pageObjects.Login;
 

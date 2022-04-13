@@ -5,9 +5,9 @@ import org.testng.annotations.Test;
 import com.opencsv.CSVReader;
 
 //import center.pageobjects.Login;
-import epd.pageObject.EntesabKarmand;
-import epd.pageObject.LoginTohr;
-import epd.pageObject.SerchUser;
+import humanresources.pageObjects.EntesabKarmand;
+import humanresources.pageObjects.Login;
+import humanresources.pageObjects.SerchUser;
 import humanresources.pageObjects.Login;
 
 import org.testng.annotations.BeforeMethod;
