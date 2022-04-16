@@ -28,7 +28,7 @@ public class EditCenter_TC {
 	WebDriver driver;
 	@DataProvider(name = "Edit")
 	public Iterator<Object[]> Provider() throws IOException{
-	CSVReader Reader = new CSVReader(new FileReader("./src/test/resources/data/EdirCenter.csv"),',','\'',1);
+	CSVReader Reader = new CSVReader(new FileReader("./src/test/resources/data/CSVFiles_Center/EdirCenter.csv"),',','\'',1);
 	String nextline[];
 	
 	List<Object[]> MyData =new ArrayList<Object[]>();

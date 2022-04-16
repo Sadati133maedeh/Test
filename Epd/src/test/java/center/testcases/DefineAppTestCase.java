@@ -31,7 +31,7 @@ public class DefineAppTestCase {
 	WebDriver driver;
 	@DataProvider(name = "Apps")
 	public Iterator<Object[]> Provider() throws IOException{
-	CSVReader Reader = new CSVReader(new FileReader("./src/test/resources/data/DefineApp.csv"),',','\'',1);
+	CSVReader Reader = new CSVReader(new FileReader("./src/test/resources/data/CSVFiles_Center/DefineApp.csv"),',','\'',1);
 	String nextline[];
 	List<Object[]> MyEnteries = new ArrayList<Object[]>();
 	while((nextline = Reader.readNext())!=null) {

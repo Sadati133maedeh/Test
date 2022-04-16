@@ -29,7 +29,7 @@ public class AddVariable_TC {
 	WebDriver driver;
 	@DataProvider(name = "variable")
 	public Iterator<Object[]> Provider() throws IOException{
-		CSVReader Reader = new CSVReader(new FileReader("./src/test/resources/data/Variables.csv"),',','\'',1);
+		CSVReader Reader = new CSVReader(new FileReader("./src/test/resources/data/CSVFiles_Center/Variables.csv"),',','\'',1);
 		String NextLine[];
 		List<Object[]>  MyData = new ArrayList<Object[]>();
 		

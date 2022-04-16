@@ -27,7 +27,7 @@ public class LoginTestCase {
 	WebDriver driver;
 	@DataProvider(name = "login")
 	public Iterator <Object[]> Provider() throws IOException {
-	CSVReader Reader = new CSVReader(new FileReader("./src/test/resources/data/logindata.csv"),',','\'',1);
+	CSVReader Reader = new CSVReader(new FileReader("./src/test/resources/data/CSVFiles_Center/logindata.csv"),',','\'',1);
 	List<Object[]> myEntries = new ArrayList<Object[]>();
 	String[] nextLine ;
 	while((nextLine =Reader.readNext())!=null) {

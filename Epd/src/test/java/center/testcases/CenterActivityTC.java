@@ -29,7 +29,7 @@ public class CenterActivityTC {
 	WebDriver driver;
 	@DataProvider(name = "activity")
 	public Iterator<Object[]> Provider() throws IOException{
-	CSVReader Reader = new CSVReader (new FileReader("./src/test/resources/data/activity.csv"),',','\'',1);
+	CSVReader Reader = new CSVReader (new FileReader("./src/test/resources/data/CSVFiles_Center/activity.csv"),',','\'',1);
 	String nextline[];
 	List <Object[]> TestData = new ArrayList<Object[]>();
 	while ((nextline = Reader.readNext())!=null) {

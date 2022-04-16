@@ -30,7 +30,7 @@ public class DeleteCenterTC {
 	WebDriver driver;
 	@DataProvider(name = "delete")
 	public Iterator<Object[]> Provider() throws IOException{
-		CSVReader Reader = new CSVReader (new FileReader("./src/test/resources/data/delet.csv"),',','\'',1);
+		CSVReader Reader = new CSVReader (new FileReader("./src/test/resources/data/CSVFiles_Center/delet.csv"),',','\'',1);
 		String nextline[];
 		List<Object[]> mydata =new ArrayList<Object[]>();
 		

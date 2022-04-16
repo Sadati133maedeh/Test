@@ -28,7 +28,7 @@ public class CenterDefine {
 	WebDriver driver;
 	@DataProvider(name = "CenterDefine")
 	public Iterator<Object[]> Provider() throws IOException{
-		CSVReader Reader = new CSVReader(new FileReader("./src/test/resources/data/centerdefine3.csv"),',','\'',1);
+		CSVReader Reader = new CSVReader(new FileReader("./src/test/resources/data/CSVFiles_Center/centerdefine3.csv"),',','\'',1);
 		String [] nextline;
 		List<Object[]> MyEntries = new ArrayList<Object[]>();
 		while((nextline = Reader.readNext())!=null) {
