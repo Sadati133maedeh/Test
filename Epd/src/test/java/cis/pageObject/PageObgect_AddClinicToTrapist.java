@@ -30,43 +30,43 @@ public class PageObgect_AddClinicToTrapist{
     @FindBy(xpath="")
 	WebElement clinicNameSearch;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[3]/app-clinics/div/div[2]/div[2]/div/div/div[1]/div/mat-checkbox/label/div")
+    @FindBy(xpath="//div[text()=' انتخاب نام کلینیک ']/following::input[@type='checkbox'][1]")
 	WebElement clinicCheckbox1;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[3]/app-clinics/div/div[2]/div[2]/div/div/div[2]/div/mat-checkbox/label/div")
+    @FindBy(xpath="//div[text()=' انتخاب نام کلینیک ']/following::input[@type='checkbox'][2]")
 	WebElement clinicCheckbox2;
 
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[3]/app-clinics/div/div[2]/div[2]/div/div/div[1]/div/mat-checkbox/label/span")
+    @FindBy(xpath="//div[text()=' انتخاب نام کلینیک ']/following::span[@class='mat-checkbox-label'][1]")
 	WebElement clinicName1;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[3]/app-clinics/div/div[2]/div[2]/div/div/div[2]/div/mat-checkbox/label/span")
+    @FindBy(xpath="//div[text()=' انتخاب نام کلینیک ']/following::span[@class='mat-checkbox-label'][2]")
 	WebElement clinicName2;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[2]/app-therapist-single/div[2]/div[2]/div/div[3]/div/div[1]/mat-checkbox/label/span")
+    @FindBy(xpath="//div [text()=' انتخاب نام درمانگر ']/following::*[contains (@class ,'mat-checkbox-label')][1]")
 	WebElement trapistName;
 
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[2]/app-therapist-single/div[1]/div[1]/div/div[1]")
+    @FindBy(xpath="//div[@title='جستجو']")
 	WebElement trapistSearchButtom;
 
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[2]/app-therapist-single/div[1]/div[2]/div/div[1]/kendo-textbox-container/input")
+    @FindBy(xpath="//label[text()='نام']/following::input[@type='text'][1]")
 	WebElement trapistNameSearch;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[2]/app-therapist-single/div[1]/div[2]/div/div[2]/kendo-textbox-container/input")
+    @FindBy(xpath="//label[text()='نام']/following::input[@type='text'][2]")
 	WebElement trapistFamilySearch;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[2]/app-therapist-single/div[1]/div[2]/div/div[3]/kendo-textbox-container/input")
+    @FindBy(xpath="//label[text()='نام']/following::input[@type='text'][3]")
 	WebElement trapistCodeSearch;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[2]/app-therapist-single/div[2]/div[2]/div/div[1]/div/div[2]/div")
+    @FindBy(xpath="//div [text()=' انتخاب نام درمانگر ']/following::*[contains (@class ,'info-container')][1]")
 	WebElement trapistCode;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[2]/app-therapist-single/div[2]/div[2]/div/div[3]/div/div[1]/mat-checkbox/label/div")
+    @FindBy(xpath="//div [text()=' انتخاب نام درمانگر ']/following::*[contains (@class ,'mat-checkbox-label')][1]")
 	WebElement trapistCheckbox;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[1]/button")
+    @FindBy(xpath="//button[@class='btn']")
 	WebElement sabtBtton;
         
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[2]/app-therapist-single/div[1]/div[1]/div/div[2]")
+    @FindBy(xpath="(//div[@title='بارگذاری مجدد'])[1]")
 	WebElement refreshTrapist;
 
     
@@ -115,7 +115,7 @@ public class PageObgect_AddClinicToTrapist{
 	    Thread.sleep(1000);
 	    String c= POPUP.getText();
 	    System.out.print("resulte:"+c);
-	    Assert.assertEquals(c,"ثبت با موفقیت انجام شد\n"
+	    Assert.assertEquals(c,"Ø«Ø¨Øª Ø¨Ø§ Ù…ÙˆÙ�Ù‚ÛŒØª Ø§Ù†Ø¬Ø§Ù… Ø´Ø¯\n"
 	    		+ "x");
 	    eh.unhighlightLast(driver, POPUP);
 

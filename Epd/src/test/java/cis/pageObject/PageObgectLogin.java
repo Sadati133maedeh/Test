@@ -13,16 +13,16 @@ public class PageObgectLogin {
 	element_Highlight eh= new element_Highlight();
 
 
-    @FindBy(xpath="/html/body/app-root/div/app-login/div/div/div/div[3]/form/div[1]/div/input")
+    @FindBy(xpath="//input[@formcontrolname='username']")
 	WebElement userName;
     
-    @FindBy(xpath="/html/body/app-root/div/app-login/div/div/div/div[3]/form/div[2]/div/input[1]")
+    @FindBy(xpath="//input[@formcontrolname='password']")
 	WebElement password;
 
-    @FindBy(xpath="/html/body/app-root/div/app-login/div/div/div/div[3]/form/div[3]/re-captcha/div/div/iframe")
+    @FindBy(xpath="//span[@id='recaptcha-anchor']")
 	WebElement iframeSwitch;
 
-    @FindBy(xpath="/html/body/app-root/div/app-login/div/div/div/div[3]/form/div[4]/button")
+    @FindBy(xpath="//button[text()='ورود']")
 	WebElement loginbutton;
     
     

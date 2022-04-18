@@ -20,13 +20,15 @@ public class PageObject_Admit {
 
       WebDriver driver;
 
+           //Admit
+
 	   @FindBy(name="NationalCode")
 	   WebElement NationalCode;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/app-admit-patient-search/div[1]/form/div[2]/div[2]/div/div[1]/div[1]/div/div[1]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//label[text()='ملیت']/following::input[1]")
 	   WebElement Meliat;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/app-admit-patient-search/div[1]/form/div[2]/div[2]/div/div[1]/div[1]/div/div[1]/kendo-combobox/span/span[1]")
+	   @FindBy(xpath="(//span[@title='clear'])[1]")
 	   WebElement ClearMeliat;
 	   
 	   @FindBy(name="ElectronicNumber")
@@ -38,10 +40,10 @@ public class PageObject_Admit {
 	   @FindBy(name="FamilyName")
 	   WebElement FamilyName;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/div/div/div[1]/app-admit-form/form/div/div[1]/div/div[2]/div[1]/div/div[2]/div/div/div/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@id='cmdTherapist']/descendant::input[1]")
 	   WebElement Trapist;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/div/div/div[1]/app-admit-form/form/div/div[1]/div/div[2]/div[1]/div/div[1]/div/div/div/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@id='cmdClinic']/descendant::input[1]")
 	   WebElement Clinic;
 
 	   @FindBy(id="filterAfterEdit")
@@ -50,25 +52,31 @@ public class PageObject_Admit {
 	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/div/div/div[1]/app-admit-form/form/div/div[1]/div/div[3]/kendo-combobox/span/kendo-searchbar/input")
 	   WebElement Assistant;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/div/div/div[1]/app-admit-form/form/div/div[1]/div/div[4]/div[1]/div/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//label[@id='shiftId']/following::input[1]")
 	   WebElement Shift;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/div/div/div[1]/app-admit-form/form/div/div[1]/div/div[4]/div[1]/div/kendo-combobox/span/span[1]")
+	   @FindBy(xpath="(//span[@title='clear'])[2]")
 	   WebElement ClearShift;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/div/div/div[1]/app-admit-form/form/div/div[2]/div/div[1]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//label[text()='مدل محاسباتی']/following::input[1]")
 	   WebElement Model;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/div/div/div[2]/app-admit-service-search/div/div/div/div[1]/div[1]/div[1]/div/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//label[text()=' گروه اصلی خدمات']/following::input[1]")
 	   WebElement ServicesCombo;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/div/div/div[2]/app-admit-service-search/div/div/div/div[1]/div[1]/div[1]/div/kendo-combobox/span/span[1]")
+	   @FindBy(xpath="(//span[@title='clear'])[3]")
 	   WebElement ClearServicesCombo;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/div/div/div[2]/app-admit-service-search/div/div/div/div[1]/div[1]/div[5]/div/div[1]/a/img")
-	   WebElement SearchServices;
+           @FindBy(xpath="//input[@id='RVU' and @type='text']")
+	   WebElement SearchServicesName;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[1]/button[3]")
+           @FindBy(xpath="//input[@id='RVU' and @type='number']")
+	   WebElement SearchServicesRVUcode;
+
+	   @FindBy(xpath="//img[@title='جستجو']")
+	   WebElement SearchServicesButton;
+
+	   @FindBy(xpath="//span[text()='ثبت']")
 	   WebElement Sabt_Admit;
 	   
 	   //AddPatient
@@ -90,25 +98,25 @@ public class PageObject_Admit {
 	   @FindBy(xpath="//*[@id=\\\"file\\\"]\"")
 	   WebElement Avatar;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[1]/div[1]/div/div[2]/div[2]/div[2]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='Sex']/descendant::input[1]")
 	   WebElement sex;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[1]/div[1]/div/div[2]/div[2]/div[4]/mat-form-field/div/div[1]/div[1]/input")
+	   @FindBy(xpath="//input[@formcontrolname='BirthDate']")
 	   WebElement birthdate;
 
 	   @FindBy(name="BirthPlaceOut")
 	   WebElement birthPlace;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[1]/div[1]/div/div[2]/div[2]/div[7]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@id='inputBirthPlace']/descendant::input[1]")
 	   WebElement mahaltavalod;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[1]/div[1]/div/div[2]/div[2]/div[3]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='MaritalStatus']/descendant::input[1]")
 	   WebElement tahol;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[1]/div[2]/div/div[2]/div[1]/div/div[3]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@id='CityCode']/descendant::input[1]")
 	   WebElement city;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[1]/div[2]/div/div[3]/kendo-textbox-container/textarea")
+	   @FindBy(xpath="//textarea[@formcontrolname='AddressStr']")
 	   WebElement adress;
 
 	   @FindBy(name="telNo")
@@ -117,28 +125,28 @@ public class PageObject_Admit {
 	   @FindBy(name="EAddress")
 	   WebElement eMAIL;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[2]/div/div[2]/div[1]/div[1]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='LastInsurance']/descendant::input[1]")
 	   WebElement bime;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[2]/div/div[2]/div[1]/div[2]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='LastInsuranceKind']/descendant::input[1]")
 	   WebElement sandogh;
 	   
 	   @FindBy(name="InsuranceNo")
 	   WebElement BIMECODE;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[2]/div/div[2]/div[2]/div[1]/mat-form-field/div/div[1]/div[1]/input")
+	   @FindBy(xpath="//input[@formcontrolname='LastInsuranceDate']")
 	   WebElement bimedate;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[2]/div/div[2]/div[2]/div[2]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='Insur_Relation']/descendant::input[1]")
 	   WebElement nesbat;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[2]/div/div[3]/div/button[1]")
+	   @FindBy(xpath="//button[@type='submit'][1]")
 	   WebElement Sabt;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[1]/div[1]/div/div[2]/div[1]/div[5]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='Nationality']/descendant::input[1]")
 	   WebElement meliat;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/app-add-patient-admit/form/div/div/div[1]/div[1]/div/div[2]/div[1]/div[5]/kendo-combobox/span/span[1]")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='Nationality']/descendant::span[@title='clear']")
 	   WebElement clearmeliat;
 	   
 	   @FindBy(name="oldId")
@@ -232,9 +240,9 @@ public class PageObject_Admit {
 		     eh.unhighlightLastB(driver, Model);
 		     Thread.sleep(1000);
 		     //AddServicesList
-		     eh.highlightElement(driver, SearchServices);
-		     action.click(SearchServices).perform();
-		     eh.unhighlightLastB(driver, SearchServices);
+		     eh.highlightElement(driver, SearchServicesButton);
+		     action.click(SearchServicesButton).perform();
+		     eh.unhighlightLastB(driver, SearchServicesButton);
 		     Thread.sleep(2000);
 		     //AddServices
 		     WebElement SelectServices1=driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-admit/div/div[2]/div[1]/div[2]/div/div/div[2]/app-admit-service-search/div/div/div/div[2]/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[1]"));

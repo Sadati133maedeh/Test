@@ -28,7 +28,7 @@ public class PageObgect_AddClinicService{
 	WebElement clinicNameSearch;
     
     
-    @FindBy(xpath="//input[@id='mat-checkbox-1-input']")
+    @FindBy(xpath="(//input[@type='checkbox'])[1]")
 	WebElement clinicCheckbox;
 
     
@@ -117,7 +117,7 @@ public class PageObgect_AddClinicService{
 	    Thread.sleep(1000);
 	    String c= POPUP.getText();
 	    System.out.print("resulte:"+c);
-	    Assert.assertEquals(c,"ثبت با موفقیت انجام شد\n"
+	    Assert.assertEquals(c,"Ø«Ø¨Øª Ø¨Ø§ Ù…ÙˆÙ�Ù‚ÛŒØª Ø§Ù†Ø¬Ø§Ù… Ø´Ø¯\n"
 	    		+ "x");
 	    eh.unhighlightLast(driver, POPUP);
 
