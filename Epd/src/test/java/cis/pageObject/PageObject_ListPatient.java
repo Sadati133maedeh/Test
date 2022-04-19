@@ -64,6 +64,8 @@ public class PageObject_ListPatient {
 		      SEARCHMELICOD.sendKeys(elment);
 		      SEARCHMELICOD.sendKeys(Keys.ENTER);
 		      Thread.sleep(3000);
+                      eh.unhighlightLast(driver, SEARCHMELICOD);
+                      
 	   }
 	   public void Search_Patient_Passport (WebDriver driver, String meli, String pass) throws Throwable {
 		   
@@ -73,7 +75,7 @@ public class PageObject_ListPatient {
 		      Thread.sleep(500);
 		      action
 		      .click(More).perform();
-		      WebElement meliat=driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-patient-list/div/app-patient-search/div[1]/form/div[2]/div[2]/div/div/div/div[2]/div[4]/kendo-combobox/span/kendo-searchbar/input"));
+		      WebElement meliat=driver.findElement(By.xpath("//label[@for='Nationality']/following::input[1]"));
 		      action
 		      .click(meliat)
 		      .sendKeys(meliat,meli).perform();
@@ -83,6 +85,17 @@ public class PageObject_ListPatient {
 		      .sendKeys(passport,pass)
 		      .sendKeys(Keys.ENTER)
 		      .perform();
+		      Thread.sleep(3000);
+	   }
+
+           public void Search_Patient_ElectronicNumber (WebDriver driver, String elment) throws Throwable {
+		   
+
+		      eh.highlightElement(driver, ElectronicNumber);
+		      Thread.sleep(500);
+		      ElectronicNumber.click();
+		      ElectronicNumber.sendKeys(elment);
+		      ElectronicNumber.sendKeys(Keys.ENTER);
 		      Thread.sleep(3000);
 	   }
 
