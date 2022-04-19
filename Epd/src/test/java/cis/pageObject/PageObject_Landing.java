@@ -12,13 +12,13 @@ public class PageObject_Landing {
 
   element_Highlight eh= new element_Highlight();
 
-   @FindBy(xpath="/html/body/app-root/div/app-layout/div/div/div[2]/div/div[2]/his-home/div/div/div/div/nav/div/div[3]/a/span")
+   @FindBy(xpath="//span[text()='مدیریت منابع انسانی']")
    WebElement HR;
 
-   @FindBy(xpath="/html/body/app-root/div/app-layout/div/div/div[2]/div/div[2]/his-home/div/div/div/div/nav/div/div[2]/a/span")
+   @FindBy(xpath="//span[text()='متغیرهای سیستم']")
    WebElement GV;
 
-   @FindBy(xpath="/html/body/app-root/div/app-layout/div/div/div[2]/div/div[2]/his-home/div/div/div/div/nav/div/div[1]/a/span")
+   @FindBy(xpath="//span[text()='CIS']")
    WebElement CIS;
 
    public void CIS_Icon( WebDriver driver) throws InterruptedException {
