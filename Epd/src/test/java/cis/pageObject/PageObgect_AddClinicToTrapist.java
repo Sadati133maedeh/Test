@@ -125,8 +125,8 @@ public class PageObgect_AddClinicToTrapist{
 		Thread.sleep(1000);
     	action.click(trapistCheckbox).perform();
 		Thread.sleep(1000);
-        WebElement addedClinic1=driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[2]/app-therapist-single/div[2]/div[2]/div/div[3]/div[2]/div/div[1]/span"));
-        WebElement addedClinic2=driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-therapist-clinic/div/div/div[2]/app-therapist-single/div[2]/div[2]/div/div[3]/div[2]/div/div[2]/span"));
+        WebElement addedClinic1=driver.findElement(By.xpath("//div[contains(@class,'cdk-drop-list')]/descendant::span[contains(@class,'service-name')][1]"));
+        WebElement addedClinic2=driver.findElement(By.xpath("//div[contains(@class,'cdk-drop-list')]/descendant::span[contains(@class,'service-name')][2]"));
 	    eh.highlightElement(driver, addedClinic1);
 		Thread.sleep(1000);
         ClinicNameAdded1=addedClinic1.getText();
