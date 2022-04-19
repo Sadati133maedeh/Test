@@ -25,43 +25,43 @@ public class PageObgect_AddTrapistToClinic{
 
 
 
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[2]/app-clinic-single/div/div[2]/kendo-textbox-container/input")
+    @FindBy(xpath="//label[text()='نام کلینیک']/following-sibling::input")
 	WebElement clinicNameSearch;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[2]/app-clinic-single/div/div[2]/div[2]/div/div/div/mat-checkbox/label/div")
+    @FindBy(xpath="(//input[@type='checkbox'])[1]")
 	WebElement clinicCheckbox;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[2]/app-clinic-single/div/div[2]/div[2]/div/div[1]/div")
+    @FindBy(xpath="//div[text()=' انتخاب نام کلینیک ']/following::span[@class='mat-checkbox-label'][1]")
 	WebElement clinicName;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[3]/app-therapists/div[2]/div[2]/div/div[1]/div/div[2]/div[1]")
+    @FindBy(xpath="(//div[contains(@class,'info-container flex-grow-1')]//div)[1]")
 	WebElement trapistName;
 
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[3]/app-therapists/div[1]/div[1]/div/div[1]")
+    @FindBy(xpath="//div[@title='جستجو']")
 	WebElement trapistSearchButtom;
 
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[3]/app-therapists/div[1]/div[2]/div/div[1]/kendo-textbox-container/input")
+    @FindBy(xpath="//label[text()='نام']/following::input[1]")
 	WebElement trapistNameSearch;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[3]/app-therapists/div[1]/div[2]/div/div[2]/kendo-textbox-container/input")
+    @FindBy(xpath="//label[text()='نام خانوادگی']/following::input[1]")
 	WebElement trapistFamilySearch;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[3]/app-therapists/div[1]/div[2]/div/div[3]/kendo-textbox-container/input")
+    @FindBy(xpath="//label[text()='نظام پزشکی']/following::input[1]")
 	WebElement trapistCodeSearch;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[3]/app-therapists/div[2]/div[2]/div/div[1]/div/div[2]/div[2]")
+    @FindBy(xpath="(//div[contains(@class,'info-container flex-grow-1')]//div)[2]")
 	WebElement trapistCode;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[3]/app-therapists/div[2]/div[2]/div/div/div/div[1]/mat-checkbox/label/div")
+    @FindBy(xpath="//div [text()=' انتخاب نام درمانگر ']/following::input[@type='checkbox'][1]")
 	WebElement trapistCheckbox;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[1]/button")
+    @FindBy(xpath="//span[text()='ثبت']")
 	WebElement sabtBtton;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[3]/app-therapists/div[1]/div[1]/div/div[1]")
+    @FindBy(xpath="//div[@title='جستجو']")
 	WebElement searchtBtton;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-therapist/div/div/div[3]/app-therapists/div[1]/div[1]/div/div[2]")
+    @FindBy(xpath="(//div[@title='بارگذاری مجدد'])[2]")
 	WebElement refreshTrapist;
 
     

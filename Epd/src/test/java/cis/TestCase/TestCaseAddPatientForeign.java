@@ -64,7 +64,7 @@ public class TestCaseAddPatientForeign {
 	 
 	 Actions action = new Actions(driver);
 
-	WebElement meliat= driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[2]/div[5]/kendo-combobox/span/kendo-searchbar/input"));
+	WebElement meliat= driver.findElement(By.xpath("//kendo-combobox[@formcontrolname='Nationality']/descendant::input[1]"));
 	meliat.click();
 	meliat.clear();
 	Thread.sleep(1000);
@@ -104,7 +104,7 @@ public class TestCaseAddPatientForeign {
   }
   @BeforeMethod
   public void beforeMethod() throws InterruptedException {
-	  System.setProperty("webdriver.chrome.driver", "./src/test/resources/driver/chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver.exe");
 	  driver = new ChromeDriver();
 	  
 	  	

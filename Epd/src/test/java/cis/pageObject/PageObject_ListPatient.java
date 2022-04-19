@@ -16,11 +16,44 @@ public class PageObject_ListPatient {
 
      WebDriver driver;
 
+ @FindBy(name="Name")
+	   WebElement Name;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-patient-list/div/app-patient-search/div[1]/form/div[2]/div[2]/div/div/div/div/kendo-textbox-container[1]/input")
+ @FindBy(name="FamilyName")
+	   WebElement FamilyName;
+
+ @FindBy(name="NationalCode")
 	   WebElement SEARCHMELICOD;
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-patient-list/div/app-patient-search/div[1]/form/div[2]/div[1]/button")
+
+ @FindBy(name="ElectronicNumber")
+	   WebElement SEARCHElectronicNumber;
+
+
+ @FindBy(xpath="//img[@alt='more']")
 	  WebElement More;
+
+ @FindBy(xpath="//label[@for='insuranceType']/following::input[1]")
+	   WebElement SEARCHbime;
+
+ @FindBy(name="InsuranceName")
+	   WebElement SEARCHbimecode;
+
+ @FindBy(name="oldId")
+	   WebElement SEARCHoldId;
+
+ @FindBy(xpath="//label[@for='Nationality']/following::input[1]")
+	   WebElement SEARCHmeliat;
+
+ @FindBy(xpath="//div[@title='جستجو']")
+	   WebElement SEARCHbutton;
+
+ @FindBy(xpath="//div[@title='بارگذاری مجدد']")
+	   WebElement RefreshButton;
+
+
+
+
+
 	   
 	   public void Search_Patient_melicode (WebDriver driver, String elment) throws Throwable {
 		   

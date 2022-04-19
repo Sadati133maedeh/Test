@@ -15,10 +15,12 @@ public class PageObject_AdmitList {
     WebDriver driver;
 
 	
-	@FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit-list/div/div[2]/form/div[2]/div/div[2]/div[4]/div/input")
+	@FindBy(name="patientCenId")
 	WebElement SearchElectronicNumber;
+
 	@FindBy(name="patientLastName")
 	WebElement patientLastName;
+
 	@FindBy(id="inputNationalCode")
 	WebElement NationalCode;
 

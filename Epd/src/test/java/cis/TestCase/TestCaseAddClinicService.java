@@ -69,7 +69,7 @@ public class TestCaseAddClinicService {
   
   @BeforeMethod
   public void beforeMethod() throws InterruptedException {
-	  System.setProperty("webdriver.chrome.driver", "./src/test/resources/driver/chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver.exe");
 	  driver = new ChromeDriver();
 	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);  
 	  
