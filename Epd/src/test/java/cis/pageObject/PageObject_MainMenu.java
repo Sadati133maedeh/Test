@@ -15,19 +15,19 @@ public class PageObject_MainMenu {
 	   @FindBy(className="menu-btn")
 	   WebElement main_menu;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-menu/nav/ul/li[1]/a/span")
+	   @FindBy(xpath="//span[text()='پذیرش ']")
 	   WebElement Admit;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-menu/nav/ul/li[4]/a/span")
+	   @FindBy(xpath="//span[text()='تشکیل پرونده ']")
 	   WebElement add_patient;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-menu/nav/ul/li[5]/a/span")
+	   @FindBy(xpath="//span[text()='لیست بیماران']")
 	   WebElement list_patient;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-menu/nav/ul/li[2]/a/span")
+	   @FindBy(xpath="//span[text()='سوابق پذیرش ']")
 	   WebElement Admit_list;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-menu/nav/ul/li[8]/a/span")
+	   @FindBy(xpath="//span[text()='تنظیمات سیستم ']")
 	   WebElement system_config;
 	   
 
@@ -77,37 +77,37 @@ public class PageObject_MainMenu {
 	    eh.highlightElement(driver,system_config);
 	    system_config.click();
 	    Thread.sleep(1000); 
-	    WebElement system_variable =driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-menu/nav/ul/li[8]/ul/li[4]/a"));
+	    WebElement system_variable =driver.findElement(By.xpath("//span[text()='تعریف متغیر های CIS']"));
 	    eh.highlightElement(driver,system_variable);
 	    system_variable.click();
 	    Thread.sleep(2000);  
 }	   
 	    public void system_variable_add_trapist_clinic (WebDriver driver) throws Throwable   {
-	    WebElement addtrapisttoclinic =driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-menu/nav/ul/li[8]/ul/li[4]/ul/li[1]/a/span"));
+	    WebElement addtrapisttoclinic =driver.findElement(By.xpath("//a[@href='/variables/clinicTherapist']//span[1]"));
 	    eh.highlightElement(driver,addtrapisttoclinic);
 	    addtrapisttoclinic.click();
 	    Thread.sleep(2000);  
 	    }  
 	    public void system_variable_add_clinic_trapist (WebDriver driver) throws Throwable   {
-	    WebElement addclinictotrapist =driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-menu/nav/ul/li[8]/ul/li[4]/ul/li[2]/a/span"));
+	    WebElement addclinictotrapist =driver.findElement(By.xpath("//a[@href='/variables/therapistClinic']//span[1]"));
 	    eh.highlightElement(driver,addclinictotrapist);
 	    addclinictotrapist.click();
 	    Thread.sleep(2000);  
 	    }   
 	    public void system_variable_add_clinic_Service (WebDriver driver) throws Throwable   {
-	    WebElement addclinicService =driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-menu/nav/ul/li[8]/ul/li[4]/ul/li[3]/a/span"));
+	    WebElement addclinicService =driver.findElement(By.xpath("//a[@href='/variables/clinicService']//span[1]"));
 	    eh.highlightElement(driver,addclinicService);
 	    addclinicService.click();
 	    Thread.sleep(2000);  
 	    }   
 	    public void system_variable_add_terapist_Service (WebDriver driver) throws Throwable   {
-	    WebElement addterapistService =driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-menu/nav/ul/li[8]/ul/li[4]/ul/li[4]/a/span"));
+	    WebElement addterapistService =driver.findElement(By.xpath("//a[@href='/variables/therapistService']//span[1]"));
 	    eh.highlightElement(driver,addterapistService);
 	    addterapistService.click();
 	    Thread.sleep(2000);  
 	    }   
 	    public void system_variable_add_terapist_Assistant (WebDriver driver) throws Throwable   {
-	    WebElement addterapistAssistant =driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-menu/nav/ul/li[8]/ul/li[4]/ul/li[5]/a/span"));
+	    WebElement addterapistAssistant =driver.findElement(By.xpath("//a[@href='/variables/therapistAssistant']//span[1]"));
 	    eh.highlightElement(driver,addterapistAssistant);
 	    addterapistAssistant.click();
 	    Thread.sleep(2000);  
