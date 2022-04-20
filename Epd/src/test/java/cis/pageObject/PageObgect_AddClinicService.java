@@ -24,7 +24,7 @@ public class PageObgect_AddClinicService{
 
 
 
-    @FindBy(xpath="")
+    @FindBy(xpath="//label[text()='نام کلینیک']/following-sibling::input")
 	WebElement clinicNameSearch;
     
     
@@ -38,10 +38,10 @@ public class PageObgect_AddClinicService{
     @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-service/div/div/div[3]/app-services/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[5]/td[4]")
 	WebElement serviceName2;
 
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-service/div/div/div[3]/app-services/div/div[2]/form/div/div[1]/kendo-combobox/span/span/span")
+    @FindBy(xpath="//label[text()='گروه اصلی خدمت']/following::span[contains(@class,'k-icon')][1]")
 	WebElement openMainservice;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-service/div/div/div[3]/app-services/div/div[2]/form/div/div[2]/kendo-combobox/span/span/span")
+    @FindBy(xpath="//label[text()='زیر گروه خدمت']/following::span[contains(@class,'k-icon')][1]")
 	WebElement openUnderservice;
     
     @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-service/div/div/div[3]/app-services/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[2]/td[1]/input")
@@ -50,11 +50,11 @@ public class PageObgect_AddClinicService{
     @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-service/div/div/div[3]/app-services/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[5]/td[1]/input")
 	WebElement serviceCheckbox2;
 
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-service/div/div/div[1]/button")
+    @FindBy(xpath="//span[text()='ثبت']")
 	WebElement sabtButton;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-service/div/div/div[2]/app-clinic-single/div/div[1]/div/div/div")
-	WebElement refreshButton;
+    @FindBy(xpath="(//div[@title='بارگذاری مجدد'])[1]")
+	WebElement refreshButtonClinic;
 
     @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-clinic-service/div/div/div[2]/app-clinic-single/div/div[2]/div[2]/div/div[1]/div/div/div/div[1]/span")
 	WebElement addedService;
@@ -112,7 +112,7 @@ public class PageObgect_AddClinicService{
     	sabtButton.click();
 	    eh.unhighlightLast(driver, sabtButton);
 	    //SuccecfulAddMessage
-	    WebElement POPUP= driver.findElement(By.xpath("/html/body/div[2]/div/div/snack-bar-container/simple-snack-bar"));
+	    WebElement POPUP= driver.findElement(By.xpath("//span[text()='ثبت با موفقیت انجام شد']"));
 	    eh.highlightElement(driver, POPUP);
 	    Thread.sleep(1000);
 	    String c= POPUP.getText();
@@ -137,7 +137,7 @@ public class PageObgect_AddClinicService{
 		Thread.sleep(1000);
         ServiceNameAdded2=addedService2.getText();
         Assert.assertTrue(ServiceNameAdded2.contains(ServiceName2));
-        action.click(refreshButton).perform();
+        action.click(refreshButtonClinic).perform();
 	}
     
     public void ClinicServicePriority ( WebDriver driver ) throws InterruptedException {

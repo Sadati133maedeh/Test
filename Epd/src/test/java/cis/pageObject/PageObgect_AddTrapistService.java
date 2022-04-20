@@ -29,26 +29,26 @@ public class PageObgect_AddTrapistService{
 
 
 
-	    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[2]/app-therapist-single/div[1]/div[1]/div/div[1]")
+	    @FindBy(xpath="//div[@title='جستجو']")
 		WebElement trapistSearchButtom;
 
-	    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[2]/app-therapist-single/div[1]/div[2]/div/div[1]/kendo-textbox-container/input")
+	    @FindBy(xpath="//label[text()='نام']/following::input[1]")
 		WebElement trapistNameSearch;
 	    
-	    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[2]/app-therapist-single/div[1]/div[2]/div/div[2]/kendo-textbox-container/input")
+	    @FindBy(xpath="//label[text()='نام خانوادگی']/following::input[1]")
 		WebElement trapistFamilySearch;
 	    
-	    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[2]/app-therapist-single/div[1]/div[2]/div/div[3]/kendo-textbox-container/input")
+	    @FindBy(xpath="//label[text()='نظام پزشکی']/following::input[1]")
 		WebElement trapistCodeSearch;
 	    
-	    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[2]/app-therapist-single/div[2]/div[2]/div/div[1]/div/div[2]/div")
+	    @FindBy(xpath="//div[@class='therapist-list']/descendant::div[contains(@class,'info-container d-flex')]//div[1]")
 		WebElement trapistCode;
 	    
-	    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[2]/app-therapist-single/div[2]/div[2]/div/div[1]/div/div[1]/mat-checkbox/label/span")
+	    @FindBy(xpath="//div[@class='therapist-list']/descendant::div[@id='b'][1]")
 		WebElement trapistName;
 
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[2]/app-therapist-single/div[2]/div[2]/div/div[1]/div/div[1]/mat-checkbox/label/div")
+    @FindBy(xpath="//div[@class='therapist-list']/descendant::input[@type='checkbox'][1]")
 	WebElement trapistCheckbox;
     
     @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[3]/app-services/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[3]/td[4]")
@@ -57,10 +57,10 @@ public class PageObgect_AddTrapistService{
     @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[3]/app-services/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[7]/td[4]")
 	WebElement serviceName2;
 
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[3]/app-services/div/div[2]/form/div/div[1]/kendo-combobox/span/span/span")
+    @FindBy(xpath="//label[text()='گروه اصلی خدمت']/following::span[contains(@class,'k-icon')][1]")
 	WebElement openMainservice;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[3]/app-services/div/div[2]/form/div/div[2]/kendo-combobox/span/span/span")
+    @FindBy(xpath="//label[text()='زیر گروه خدمت']/following::span[contains(@class,'k-icon')][1]")
 	WebElement openUnderservice;
     
     @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[3]/app-services/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[3]/td[1]/input")
@@ -69,11 +69,14 @@ public class PageObgect_AddTrapistService{
     @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[3]/app-services/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[7]/td[1]/input")
 	WebElement serviceCheckbox2;
 
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[1]/button")
+    @FindBy(xpath="//span[text()='ثبت']")
 	WebElement sabtButton;
     
-    @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[2]/app-therapist-single/div[1]/div[1]/div/div[2]")
+    @FindBy(xpath="(//div[@title='بارگذاری مجدد'])[1]")
 	WebElement refreshButton;
+
+    @FindBy(xpath="(//div[@role='presentation'])[1]/descendant::input")
+	WebElement servicesSearch;
     
     @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-therapist-service/div/div/div[2]/app-therapist-single/div[2]/div[2]/div/div[1]/div[2]/div/div[1]/span")
 	WebElement addedService;

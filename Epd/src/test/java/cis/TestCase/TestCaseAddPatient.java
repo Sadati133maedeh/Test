@@ -91,7 +91,7 @@ public class TestCaseAddPatient {
   }
   @BeforeMethod
   public void beforeMethod() throws InterruptedException {
-	  System.setProperty("webdriver.chrome.driver", "./src/test/resources/driver/chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver.exe");
 	  driver = new ChromeDriver();
       driver.get("http://mellicode.azmads.com/Home/");
 	  WebElement Code = driver.findElement(By.xpath("/html/body/div[2]/div[1]/h2[2]"));

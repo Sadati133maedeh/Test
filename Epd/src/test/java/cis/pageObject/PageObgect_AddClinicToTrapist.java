@@ -27,7 +27,7 @@ public class PageObgect_AddClinicToTrapist{
 
 
 
-    @FindBy(xpath="")
+    @FindBy(xpath="//label[text()='نام کلینیک']/following-sibling::input")
 	WebElement clinicNameSearch;
     
     @FindBy(xpath="//div[text()=' انتخاب نام کلینیک ']/following::input[@type='checkbox'][1]")

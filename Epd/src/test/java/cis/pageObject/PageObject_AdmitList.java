@@ -15,12 +15,17 @@ public class PageObject_AdmitList {
     WebDriver driver;
 
 	
-	@FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-admit-list/div/div[2]/form/div[2]/div/div[2]/div[4]/div/input")
+	@FindBy(name="patientCenId")
 	WebElement SearchElectronicNumber;
+
 	@FindBy(name="patientLastName")
 	WebElement patientLastName;
+
 	@FindBy(id="inputNationalCode")
 	WebElement NationalCode;
+
+        @FindBy(xpath="//label[@for='Nationality']/following::input[1]")
+	WebElement Meliat;
 
 	
 	public void Search_Admit_ElectronicNumber (WebDriver driver, String electronicNumber) throws Throwable {
@@ -56,6 +61,24 @@ public class PageObject_AdmitList {
 	      Thread.sleep(500);
 	      action.click(NationalCode).perform();
 	      action.sendKeys(nationalCode).perform();
+	      Thread.sleep(500);
+	      action.sendKeys(Keys.ENTER).perform();
+	      Thread.sleep(3000);
+}
+
+
+	public void Search_Admit_PassportCode (WebDriver driver,String meliat, String passport) throws Throwable {
+		   
+		 Actions action = new Actions(driver);
+              eh.highlightElement(driver, Meliat);
+              action.click( Meliat).perform();
+	      action.sendKeys(meliat).perform();
+              Thread.sleep(500);
+              WebElement Passport=driver.findElement(By.name("passCode"));
+	      eh.highlightElement(driver, Passport);
+	      Thread.sleep(500);
+	      action.click(Passport).perform();
+	      action.sendKeys(passport).perform();
 	      Thread.sleep(500);
 	      action.sendKeys(Keys.ENTER).perform();
 	      Thread.sleep(3000);

@@ -35,25 +35,25 @@ public class PageObject_AddPatient {
 	   @FindBy(xpath="//*[@id=\\\"file\\\"]\"")
 	   WebElement Avatar;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[3]/div[2]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='Sex']/descendant::input")
 	   WebElement sex;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[3]/div[4]/mat-form-field/div/div[1]/div[1]/input")
+	   @FindBy(xpath="//input[@formcontrolname='BirthDate']")
 	   WebElement birthdate;
 
 	   @FindBy(name="BirthPlaceOut")
 	   WebElement birthPlace;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[3]/div[7]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@id='inputBirthPlace']/descendant::input")
 	   WebElement mahaltavalod;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[3]/div[3]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='MaritalStatus']/descendant::input")
 	   WebElement tahol;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[4]/div/div[2]/div[1]/div[2]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@id='CityCode']/descendant::input")
 	   WebElement city;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[4]/div/div[3]/kendo-textbox-container/textarea")
+	   @FindBy(xpath="//textarea[@formcontrolname='AddressStr']")
 	   WebElement adress;
 
 	   @FindBy(name="telNo")
@@ -62,28 +62,28 @@ public class PageObject_AddPatient {
 	   @FindBy(name="EAddress")
 	   WebElement eMAIL;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='LastInsurance']/descendant::input[1]")
 	   WebElement bime;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[2]/div[1]/div[1]/div[2]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='LastInsuranceKind']/descendant::input[1]")
 	   WebElement sandogh;
 	   
 	   @FindBy(name="InsuranceNo")
 	   WebElement BIMECODE;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[2]/div[1]/div[2]/div[1]/mat-form-field/div/div[1]/div[1]/input")
+	   @FindBy(xpath="//input[@formcontrolname='LastInsuranceDate']")
 	   WebElement bimedate;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[2]/div[1]/div[2]/div[2]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='Insur_Relation']/descendant::input[1]")
 	   WebElement nesbat;
 
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[1]/button[1]")
+	   @FindBy(xpath="//button[@type='submit'][1]")
 	   WebElement Sabt;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[2]/div[5]/kendo-combobox/span/kendo-searchbar/input")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='Nationality']/descendant::input[1]")
 	   WebElement meliat;
 	   
-	   @FindBy(xpath="/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[2]/div[5]/kendo-combobox/span/span[1]")
+	   @FindBy(xpath="//kendo-combobox[@formcontrolname='Nationality']/descendant::span[@title='clear']")
 	   WebElement clearmeliat;
 	   
 	   @FindBy(name="oldId")
@@ -308,7 +308,7 @@ public class PageObject_AddPatient {
 		      eh.unhighlightLast(driver, birthdate);
 		      
 		      //mahal tavalod
-		    WebElement birthPlace= driver.findElement(By.xpath("/html/body/app-root/div/app-cis-layout/app-add-patient/form/div[2]/div[2]/div[1]/div[3]/div[5]/input"));
+		    WebElement birthPlace= driver.findElement(By.name("BirthPlaceOut"));
 		      eh.highlightElement(driver, birthPlace);
 		      Thread.sleep(500);
 		      action.click(birthPlace).perform();
