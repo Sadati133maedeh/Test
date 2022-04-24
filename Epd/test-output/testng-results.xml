@@ -1,157 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-17T09:52:33Z" name="Default suite" finished-at="2022-04-17T09:54:08Z" duration-ms="95095">
+  <suite started-at="2022-04-20T06:41:46Z" name="Default suite" finished-at="2022-04-20T06:42:06Z" duration-ms="19814">
     <groups>
     </groups>
-    <test started-at="2022-04-17T09:52:33Z" name="Default test" finished-at="2022-04-17T09:54:08Z" duration-ms="95095">
-      <class name="hr.TestCases.AddUser_TC">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:hr.TestCases.AddUser_TC@791f145a]" started-at="2022-04-17T14:22:33Z" name="beforeMethod" finished-at="2022-04-17T14:22:54Z" duration-ms="21049" status="PASS">
+    <test started-at="2022-04-20T06:41:46Z" name="Default test" finished-at="2022-04-20T06:42:06Z" duration-ms="19814">
+      <class name="cis.TestCase.TestCaseAddClinicToTrapist">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:cis.TestCase.TestCaseAddClinicToTrapist@41a0aa7d]" started-at="2022-04-20T11:11:46Z" name="beforeMethod" finished-at="2022-04-20T11:11:50Z" duration-ms="3946" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:hr.TestCases.AddUser_TC@791f145a]" started-at="2022-04-17T14:22:54Z" name="f" data-provider="ADD" finished-at="2022-04-17T14:24:08Z" duration-ms="73944" status="PASS">
+        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:cis.TestCase.TestCaseAddClinicToTrapist@41a0aa7d]" started-at="2022-04-20T11:11:50Z" name="f" data-provider="Login" finished-at="2022-04-20T11:12:06Z" duration-ms="15777" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[5570010238]]>
+                <![CDATA[http://79.175.176.91:8013]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[epd123456]]>
+                <![CDATA[0046651357]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[مینا]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[حدادی]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[علی]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[زن]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[1370/10/10]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[تهران]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[0383922518]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[زن]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[gonafix552@bamibi.com]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[09172572217]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[تهران]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[تهران ، میدان فردوسی]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[5142365498]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[مسئول]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[کارشناسی]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[1400/01/05]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[مدیریت]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[منابع انسانی]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[سایر]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[1400/01/05]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[کارشناسی]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[تهران]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[ماه]]>
+                <![CDATA[9Y53hg1]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[@id='recaptcha-anchor']"}  (Session info: chrome=100.0.4896.127)For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'System info: host: 'EPD121', ip: '192.168.5.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\MSADAT~1.000\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:56745}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}Session ID: ad41f947e4616cf499da8eb4c7f2ebad*** Element info: {Using=xpath, value=//span[@id='recaptcha-anchor']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@id='recaptcha-anchor']"}  (Session info: chrome=100.0.4896.127)For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'System info: host: 'EPD121', ip: '192.168.5.121', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\MSADAT~1.000\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:56745}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}Session ID: ad41f947e4616cf499da8eb4c7f2ebad*** Element info: {Using=xpath, value=//span[@id='recaptcha-anchor']}at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)at org.openqa.selenium.By$ByXPath.findElement(By.java:353)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)at com.sun.proxy.$Proxy13.getWrappedElement(Unknown Source)at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)at org.openqa.selenium.remote.RemoteWebDriver$RemoteTargetLocator.frame(RemoteWebDriver.java:887)at cis.pageObject.PageObgectLogin.login(PageObgectLogin.java:44)at cis.TestCase.TestCaseAddClinicToTrapist.f(TestCaseAddClinicToTrapist.java:47)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:564)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:hr.TestCases.AddUser_TC@791f145a]" started-at="2022-04-17T14:24:08Z" name="afterMethod" finished-at="2022-04-17T14:24:08Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:cis.TestCase.TestCaseAddClinicToTrapist@41a0aa7d]" started-at="2022-04-20T11:12:06Z" name="afterMethod" finished-at="2022-04-20T11:12:06Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- hr.TestCases.AddUser_TC -->
+      </class> <!-- cis.TestCase.TestCaseAddClinicToTrapist -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
