@@ -19,7 +19,7 @@ public class PageObgectLogin {
     @FindBy(xpath="//input[@formcontrolname='password']")
 	WebElement password;
 
-    @FindBy(xpath="//span[@id='recaptcha-anchor']")
+    @FindBy(xpath="//iframe[@title='reCAPTCHA']")
 	WebElement iframeSwitch;
 
     @FindBy(xpath="//button[text()='ورود']")
@@ -43,7 +43,7 @@ public class PageObgectLogin {
 		
 	    driver.switchTo().frame(iframeSwitch);
 	    Thread.sleep(2000);
-	    driver.findElement(By.xpath("/html/body/div[2]/div[3]/div[1]/div/div/span")).click();
+	    driver.findElement(By.xpath("//span[@id='recaptcha-anchor']")).click();
 		driver.switchTo().defaultContent();
 		Thread.sleep(50000);
 		
