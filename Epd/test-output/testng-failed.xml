@@ -3,13 +3,13 @@
 <suite thread-count="-1" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="cis.TestCase.TestCaseAddClinicToTrapist">
+      <class name="GV.TestCases.TestCase_Group_Services_DeActive">
         <methods>
-          <include name="afterMethod"/>
           <include name="f" invocation-numbers="0"/>
           <include name="beforeMethod"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- cis.TestCase.TestCaseAddClinicToTrapist -->
+      </class> <!-- GV.TestCases.TestCase_Group_Services_DeActive -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
