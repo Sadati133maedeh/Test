@@ -2,6 +2,7 @@ package GV.PageObject;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -64,8 +65,29 @@ public class PageObject_center_services {
   
   
 
-  public void z( WebDriver driver ) throws InterruptedException {
+  public void clippingServiceName ( WebDriver driver , String maingroup ,String newservicename) throws InterruptedException {
 	   Actions action = new Actions(driver);
+	   action
+	   .click(MainGroupServices)
+	   .perform();
+	   Thread.sleep(500);
+	   action
+	   .sendKeys(maingroup).perform();
+	   Thread.sleep(500);
+	   action
+	   .sendKeys(Keys.ENTER)
+	   .perform();
+	   Thread.sleep(3000);
+	   action
+	   .click(clippingServiceName)
+	   .sendKeys(newservicename)
+	   .click(Save)
+	   .perform();
+	   WebElement a= driver.findElement(By.xpath("//div[@role='alertdialog']"));
+	   eh.highlightElement(driver,a);
+
+	   
+
 
 }
 }
