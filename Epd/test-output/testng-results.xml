@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-25T07:36:03Z" name="Default suite" finished-at="2022-04-25T07:39:36Z" duration-ms="212756">
+  <suite started-at="2022-04-25T11:08:33Z" name="Default suite" finished-at="2022-04-25T11:10:44Z" duration-ms="131113">
     <groups>
     </groups>
-    <test started-at="2022-04-25T07:36:03Z" name="Default test" finished-at="2022-04-25T07:39:36Z" duration-ms="212756">
-      <class name="GV.TestCases.TestCase_Group_Services_DeActive">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:GV.TestCases.TestCase_Group_Services_DeActive@470734c3]" started-at="2022-04-25T12:06:03Z" name="beforeMethod" finished-at="2022-04-25T12:06:46Z" duration-ms="43038" status="PASS">
+    <test started-at="2022-04-25T11:08:33Z" name="Default test" finished-at="2022-04-25T11:10:44Z" duration-ms="131113">
+      <class name="GV.TestCases.TestCase_Service_SearchService">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:GV.TestCases.TestCase_Service_SearchService@470734c3]" started-at="2022-04-25T15:38:33Z" name="beforeMethod" finished-at="2022-04-25T15:38:41Z" duration-ms="8305" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:GV.TestCases.TestCase_Group_Services_DeActive@470734c3]" started-at="2022-04-25T12:06:46Z" name="f" data-provider="DeActive_GroupService" finished-at="2022-04-25T12:09:36Z" duration-ms="169489" status="FAIL">
+        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:GV.TestCases.TestCase_Service_SearchService@470734c3]" started-at="2022-04-25T15:38:41Z" name="f" data-provider="Service_Search" finished-at="2022-04-25T15:40:44Z" duration-ms="122702" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,31 +30,28 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[جراحی]]>
+                <![CDATA[آمبولانس تيپA شهرستان]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[غیر]]>
+                <![CDATA[ميکروتراپي (PRT يا Facet therapy) به ازاي هر 3 تزريق اضافه]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[705330]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr[426]/td[3]/descendant::input"}  (Session info: chrome=100.0.4896.127)For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'System info: host: 'DESKTOP-FSDL0IP', ip: '192.168.1.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Samane\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:12954}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}Session ID: f4085ae9ca95d9ffbe2842d12f07c25f*** Element info: {Using=xpath, value=//table/tbody/tr[426]/td[3]/descendant::input}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr[426]/td[3]/descendant::input"}  (Session info: chrome=100.0.4896.127)For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.htmlBuild info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'System info: host: 'DESKTOP-FSDL0IP', ip: '192.168.1.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Samane\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:12954}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}Session ID: f4085ae9ca95d9ffbe2842d12f07c25f*** Element info: {Using=xpath, value=//table/tbody/tr[426]/td[3]/descendant::input}at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)at org.openqa.selenium.By$ByXPath.findElement(By.java:353)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)at GV.PageObject.PageObject_group_services.DeActive_mainGroup(PageObject_group_services.java:66)at GV.TestCases.TestCase_Group_Services_DeActive.f(TestCase_Group_Services_DeActive.java:65)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:567)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:GV.TestCases.TestCase_Group_Services_DeActive@470734c3]" started-at="2022-04-25T12:09:36Z" name="afterMethod" finished-at="2022-04-25T12:09:36Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:GV.TestCases.TestCase_Service_SearchService@470734c3]" started-at="2022-04-25T15:40:44Z" name="afterMethod" finished-at="2022-04-25T15:40:44Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- GV.TestCases.TestCase_Group_Services_DeActive -->
+      </class> <!-- GV.TestCases.TestCase_Service_SearchService -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
