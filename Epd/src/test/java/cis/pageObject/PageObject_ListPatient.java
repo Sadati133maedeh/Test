@@ -91,11 +91,11 @@ public class PageObject_ListPatient {
            public void Search_Patient_ElectronicNumber (WebDriver driver, String elment) throws Throwable {
 		   
 
-		      eh.highlightElement(driver, ElectronicNumber);
+		      eh.highlightElement(driver, SEARCHElectronicNumber);
 		      Thread.sleep(500);
-		      ElectronicNumber.click();
-		      ElectronicNumber.sendKeys(elment);
-		      ElectronicNumber.sendKeys(Keys.ENTER);
+		      SEARCHElectronicNumber.click();
+		      SEARCHElectronicNumber.sendKeys(elment);
+		      SEARCHElectronicNumber.sendKeys(Keys.ENTER);
 		      Thread.sleep(3000);
 	   }
 
