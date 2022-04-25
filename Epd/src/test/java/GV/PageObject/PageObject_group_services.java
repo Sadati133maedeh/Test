@@ -45,8 +45,6 @@ public class PageObject_group_services {
   @FindBy(xpath="(//mat-select[@role='combobox'])[4]")
   WebElement NumberPerPage;
   
-  @FindBy(xpath="//table/tbody/tr[426]/td[3]/descendant::input")
-  WebElement Checkbox2thjarahi;
 
 
 
@@ -63,6 +61,7 @@ public class PageObject_group_services {
 	   .sendKeys(Keys.ENTER)
 	   .perform();
 	   Thread.sleep(6000);
+       WebElement Checkbox2thjarahi= driver.findElement(By.xpath("//table/tbody/tr[58]/td[3]/descendant::input[@aria-checked='false']"));
 	   Checkbox2thjarahi.click();
 	   Save.click();
 	   Thread.sleep(6000);
