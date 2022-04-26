@@ -20,6 +20,10 @@ public class PageObject_Landing {
 
    @FindBy(xpath="//span[text()='CIS']")
    WebElement CIS;
+   
+   @FindBy(xpath="//span[text()=' power_settings_new ']")
+   WebElement Exit;
+
 
    public void CIS_Icon( WebDriver driver) throws InterruptedException {
 	   
@@ -44,5 +48,17 @@ public class PageObject_Landing {
 	   
 	   
    }
+ public void Exit ( WebDriver driver) throws InterruptedException {
 	   
+	   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	   eh.highlightElement(driver,Exit);
+	   Thread.sleep(1000);
+	   Exit.click();
+	   Thread.sleep(10000);
+
+	   
+	   
+ }
+
+
  }

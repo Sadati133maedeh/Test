@@ -53,20 +53,34 @@ public class PageObject_center_services {
   @FindBy(xpath="//button[@mattooltip='ذخیره']")
   WebElement Save;
 
-  @FindBy(xpath="//mat-table[@role='grid']/mat-row[2]/mat-cell[4]/descendant::input")
-  WebElement clippingServiceName;
+  @FindBy(xpath="//mat-select[@name='beginCenterGroup']")
+  WebElement BeginCenterGroup;
+  
+  @FindBy(xpath="//mat-select[@name='beginCentreName']")
+  WebElement BeginCentreName;
+  
+  @FindBy(xpath="//mat-select[@name='destinationCenterGroup']")
+  WebElement DestinationCenterGroup;
+  
+  @FindBy(xpath="//mat-select[@name='DestinationCentreName']")
+  WebElement DestinationCentreName;
+  
+  @FindBy(xpath="//button[@type='submit']")
+  WebElement Copy;
 
 
-  @FindBy(xpath="//mat-table[@role='grid']/mat-row[2]/mat-cell[5]/descendant::input")
-  WebElement NewServiceCode;
+
+  
+
 
  
 
   
   
 
-  public void clippingServiceName ( WebDriver driver , String maingroup ,String newservicename) throws InterruptedException {
+  public void clippingServiceName ( WebDriver driver , String maingroup ,String newservicename, String maingroup2 ,String newservicename2) throws InterruptedException {
 	   Actions action = new Actions(driver);
+	   //درج نام اختصاری 1
 	   action
 	   .click(MainGroupServices)
 	   .perform();
@@ -78,6 +92,8 @@ public class PageObject_center_services {
 	   .sendKeys(Keys.ENTER)
 	   .perform();
 	   Thread.sleep(3000);
+	       driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
+	   WebElement clippingServiceName= driver.findElement(By.xpath("//mat-table[@role='grid']/mat-row[2]/mat-cell[4]/descendant::input"));
 	   action
 	   .click(clippingServiceName)
 	   .sendKeys(newservicename)
@@ -85,9 +101,107 @@ public class PageObject_center_services {
 	   .perform();
 	   WebElement a= driver.findElement(By.xpath("//div[@role='alertdialog']"));
 	   eh.highlightElement(driver,a);
+	   Thread.sleep(2000);
+	   action.click(Refresh).perform();
+		  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
+	   //درج نام اختصاری 2
+	   action
+	   .click(MainGroupServices)
+	   .perform();
+	   Thread.sleep(500);
+	   action
+	   .sendKeys(maingroup2).perform();
+	   Thread.sleep(500);
+	   action
+	   .sendKeys(Keys.ENTER)
+	   .perform();
+	   Thread.sleep(3000);
+		  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
+	   WebElement clippingServiceName2= driver.findElement(By.xpath("//mat-table[@role='grid']/mat-row[2]/mat-cell[4]/descendant::input"));
+	   action
+	   .click(clippingServiceName2)
+	   .sendKeys(newservicename2)
+	   .click(Save)
+	   .perform();
+	   WebElement b= driver.findElement(By.xpath("//div[@role='alertdialog']"));
+	   eh.highlightElement(driver,b);
+
+     }
+  public void CopyCenterServices ( WebDriver driver , String beginCenterGroup ,String beginCentreName, String destinationCenterGroup ,String destinationCentreName) throws InterruptedException {
+	   Actions action = new Actions(driver);
+	   action
+	     .click(BeginCenterGroup)
+	     .sendKeys(beginCenterGroup)
+	     .sendKeys(Keys.ENTER)
+	     .perform();
+		  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
+		 action
+		   .click(BeginCentreName)
+		   .sendKeys(beginCentreName)
+		   .sendKeys(Keys.ENTER)
+		   .perform();
+			  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);
+		 action
+		    .click(DestinationCenterGroup)
+			.sendKeys(destinationCenterGroup)
+			.sendKeys(Keys.ENTER)
+		    .perform();
+			   driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
+		 action
+			 .click(DestinationCentreName)
+			 .sendKeys(destinationCentreName)
+			 .sendKeys(Keys.ENTER)
+			 .perform();
+				 driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
+		action.click(Copy).perform();
+
 
 	   
+  }
+  
+  public void Check_CopyCenterServices ( WebDriver driver , String maingroup ,String newservicename, String maingroup2 ,String newservicename2) throws InterruptedException {
+	   Actions action = new Actions(driver);
+	   //چک درج نام اختصاری 1
+	   action
+	   .click(MainGroupServices)
+	   .perform();
+	   Thread.sleep(500);
+	   action
+	   .sendKeys(maingroup).perform();
+	   Thread.sleep(500);
+	   action
+	   .sendKeys(Keys.ENTER)
+	   .perform();
+	   Thread.sleep(3000);
+	       driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
+	   WebElement clippingServiceName= driver.findElement(By.xpath("//mat-table[@role='grid']/mat-row[2]/mat-cell[4]/descendant::input"));
+	 String  newNameAdded=clippingServiceName.getText();
+	 Assert.assertEquals(newNameAdded, newservicename);
+	   eh.highlightElement(driver,clippingServiceName);
+
+	   //چک درج نام اختصاری 2
+	   action
+	   .click(MainGroupServices)
+	   .perform();
+	   Thread.sleep(500);
+	   action
+	   .sendKeys(maingroup2).perform();
+	   Thread.sleep(500);
+	   action
+	   .sendKeys(Keys.ENTER)
+	   .perform();
+	   Thread.sleep(3000);
+		  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
+	   WebElement clippingServiceName2= driver.findElement(By.xpath("//mat-table[@role='grid']/mat-row[2]/mat-cell[4]/descendant::input"));
+		 String  newNameAdded2=clippingServiceName2.getText();
+		 Assert.assertEquals(newNameAdded2, newservicename2);
+		   eh.highlightElement(driver,clippingServiceName2);
+		   Thread.sleep(3000);
 
 
-}
+
+	   
+ }
+
+  
 }

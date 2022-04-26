@@ -88,6 +88,10 @@ public class PageObject_MainMenu {
 //زیرمنوی امنیت
    @FindBy(xpath="(//span[text()='امنیت'])[2]")
    WebElement Security1;
+ //خروج
+   @FindBy(xpath="//mat-icon[@mattooltip='خروج']")
+   WebElement Exit;
+
    
    
 
@@ -200,6 +204,8 @@ public class PageObject_MainMenu {
 	   eh.highlightElement(driver,Services_CenterServices);
 	   Services_CenterServices.click();
 	   Thread.sleep(1000);
+	   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
    }
    public void Tariff_Icon( WebDriver driver) throws InterruptedException {
 	   
@@ -301,6 +307,16 @@ public class PageObject_MainMenu {
 	   Security1.click();
 	   Thread.sleep(1000);
    }
+   
+   public void Exit ( WebDriver driver) throws InterruptedException {
+	   
+	   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	   eh.highlightElement(driver,Exit);
+	   Thread.sleep(1000);
+	   Exit.click();
+	   Thread.sleep(1000);
+   }
+
 
 
 
