@@ -18,6 +18,8 @@ public class PageObject_license {
   element_Highlight eh= new element_Highlight();
   
   String AddedCode; 
+  String AddedCode2; 
+  String AddedCode3; 
   String licenseName;
   String searchlicense;
 
@@ -63,6 +65,19 @@ public class PageObject_license {
  //اضافه کردن مچوز
    public void Addlicense( WebDriver driver , String licenseCode ,String licenseCode2 ,String licenseCode3 ) throws InterruptedException {
 	   Actions action = new Actions(driver);
+	 //نمایش لیست غیر فعال
+	   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	   eh.highlightElement(driver,Active_Diactive);
+	   Thread.sleep(1000);
+	   Active_Diactive.click();
+	   eh.unhighlightLast(driver, Active_Diactive);
+	   action
+	   .sendKeys(Keys.UP)
+	   .sendKeys(Keys.ENTER).perform();
+	   Thread.sleep(1000);
+	   action.click(SearchButtom).perform();
+	   Thread.sleep(1000);
+
 
 //انتخاب و ذخیره مجوز اول
 	   action
@@ -124,7 +139,7 @@ public class PageObject_license {
 
 		   try{
 
-			   AddedCode=FirstCodetd.getText();
+			   AddedCode2=FirstCodetd.getText();
 
 		      staleElement = false;
 
@@ -137,10 +152,10 @@ public class PageObject_license {
 
 		 }
 
-	   AddedCode=FirstCodetd.getText();
-	   System.out.println(AddedCode);
+	   AddedCode2=FirstCodetd.getText();
+	   System.out.println(AddedCode2);
 	   Thread.sleep(500);
-	   Assert.assertEquals(AddedCode, licenseCode2);
+	   Assert.assertEquals(AddedCode2, licenseCode2);
 	   action.click(Refresh).perform();
 
 	 //نمایش لیست غیر فعال
@@ -175,9 +190,28 @@ public class PageObject_license {
 	   .sendKeys(licenseCode3)
 	   .click(SearchButtom)
 	   .perform();
-	   AddedCode=FirstCodetd.getText();
+	   Boolean staleElement1 = true;
+	   while(staleElement1){
+
+		   try{
+
+			   AddedCode2=FirstCodetd.getText();
+
+		      staleElement1 = false;
+
+
+		   } catch(StaleElementReferenceException FirstCodetd){
+
+		     staleElement1 = true;
+
+		   }
+
+		 }
+
+
+	   AddedCode3=FirstCodetd.getText();
 	   Thread.sleep(500);
-	   Assert.assertEquals(AddedCode, licenseCode3);   
+	   Assert.assertEquals(AddedCode3, licenseCode3);   
 	   
    }
 
