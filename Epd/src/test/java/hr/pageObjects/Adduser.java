@@ -93,8 +93,7 @@ WebElement Onvan;
 
 @FindBy(id = "StartDateE")  WebElement StartDate;
 
-@FindBy(xpath = "/html/body/app-root/div/app-hr-layout/div/div/div/"
-		+ "app-add-edit/div[2]/div[2]/div[2]/div[4]/button")  WebElement Location;
+@FindBy(xpath = "//button[text()='اطلاعات محل استقرار']")  WebElement Location;
 
 @FindBy(xpath = "/html/body/app-root/div/app-hr-layout/div/div/div/app-add-edit/div[2]/div[2]/div[2]/div[4]/div/location"
 		+ "/form/div[1]/div[1]/div/kendo-combobox/span/kendo-searchbar/input")  WebElement ActivityLocation;  //درمانی غیر
@@ -250,42 +249,48 @@ public void AddEmploye(String Name , String familyName , String fatherName , Str
 	//driver.findElement(By.id("StartDateE")).sendKeys(Keys.PAGE_DOWN);
 	
 	//H.highLighterMethod(driver, Location);
-//	Location.click();      //استقرار محل اطلاعات
-//	
-//	
-//	StringSelection slection18 = new StringSelection("غیر درمانی");
-//	clipboard.setContents(slection18, null);
-//	//H.highLighterMethod(driver, ActivityLocation);
-//	ActivityLocation.sendKeys(Keys.CONTROL +"V");
-//	
-//	
-//	StringSelection slection19 = new StringSelection(group);
-//	clipboard.setContents(slection19, null);
+	
+	StartDate.sendKeys(Keys.PAGE_DOWN);
+	StartDate.sendKeys(Keys.PAGE_DOWN);
+	
+	
+	Thread.sleep(3000);
+	Location.click();      //استقرار محل اطلاعات
+	
+	
+	StringSelection slection18 = new StringSelection("غیر درمانی");
+		clipboard.setContents(slection18, null);
+	//H.highLighterMethod(driver, ActivityLocation);
+	ActivityLocation.sendKeys(Keys.CONTROL +"V");
+	
+	
+	StringSelection slection19 = new StringSelection(group);
+	clipboard.setContents(slection19, null);
 //	//H.highLighterMethod(driver,Group);
-//	Group.sendKeys(Keys.CONTROL +"V");
-//	Group.sendKeys(Keys.ENTER);
-//	Group.sendKeys(Keys.TAB);
+	Group.sendKeys(Keys.CONTROL +"V");
+	Group.sendKeys(Keys.ENTER);
+	Group.sendKeys(Keys.TAB);
 //	
 //	//bakhsh
-//	StringSelection slection20 = new StringSelection(Aria);
-//	clipboard.setContents(slection20, null);
-//	//H.highLighterMethod(driver,aria);
-//	aria.sendKeys(Keys.CONTROL +"V");
-//	aria.sendKeys(Keys.ENTER);
+	StringSelection slection20 = new StringSelection(Aria);
+	clipboard.setContents(slection20, null);
+	//H.highLighterMethod(driver,aria);
+	aria.sendKeys(Keys.CONTROL +"V");
+	aria.sendKeys(Keys.ENTER);
 //	
 //	
-//	StringSelection slection21 = new StringSelection(role);
-//	clipboard.setContents(slection21, null);
+	StringSelection slection21 = new StringSelection(role);
+	clipboard.setContents(slection21, null);
 //	//H.highLighterMethod(driver,Role);
-//	Role.sendKeys(Keys.CONTROL +"V");
-//	Role.sendKeys(Keys.ENTER);
+	Role.sendKeys(Keys.CONTROL +"V");
+	Role.sendKeys(Keys.ENTER);
 //	
 //
 //
-//	StartDate2.sendKeys(startDate2);
+	StartDate2.sendKeys(startDate2);
 	
 	
-	//AddLocation.click();   //mahale esteghrar
+	AddLocation.click();   //mahale esteghrar
 	
 	
 	Save.click();

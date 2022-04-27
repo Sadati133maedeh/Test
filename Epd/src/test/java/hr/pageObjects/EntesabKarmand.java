@@ -15,40 +15,35 @@ import org.openqa.selenium.support.ui.Select;
 
 public class EntesabKarmand {
 	WebDriver driver;
-	@FindBy(xpath = "/html/body/app-root/div/app-hr-layout/div/div/app-menu/div/nav/ul/li[2]/a")
+	@FindBy(xpath = "//a[@title = 'امنیت']")
 	WebElement SecurityPanel;
 	
-	@FindBy(xpath = "/html/body/app-root/div/app-hr-layout/div/div/app-menu/div/nav/ul/li[2]/ul/li[2]")
+	@FindBy(xpath = "//a[@title = 'گروه کاربری']")
 	WebElement ActivityGroup;
 	
 	
-	@FindBy(xpath = "/html/body/app-root/div/app-hr-layout/div/div/div/user-group"
-			+ "-assignment/div/div[3]/employee-grid/div[2]/div/div/kendo"
-			+ "-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr/td[1]/a")
+	
+	
+	@FindBy(xpath = "//td[@class = 'k-hierarchy-cell'][1]")
 	WebElement Expand;
 	
 	
-	@FindBy(xpath = "//div/form/div/div/div/kendo-combobox/span/span")
+	@FindBy(xpath = "//kendo-combobox[@id = 'AppName']//input[@class= 'k-input']")
 	WebElement Roles;
 	
-	@FindBy(xpath = "//li[contains(.,'منابع انسانی')]")
 	
-//	@FindBy(xpath = "/html/body/app-root/div/app-hr-layout/div/div/div/user-group-assignment/div/div[3]/employee"
-//			+ "-grid/div[2]/div/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[2]"
-//			+ "/td[2]/div/sub-grid/div/div/div/div/form/div/div[2]/div/kendo-multiselect/div")
+	@FindBy(xpath = "//input[@role='listbox']")
+	WebElement Role2;
 	
-	WebElement Roles2;
 	
-	@FindBy(tagName = "kendo-popup")
-	WebElement test;
 	
-	@FindBy(xpath = "/html/body/app-root/div/app-hr-layout/div/div/div/user-group-assignment/d"
-			+ "iv/div[3]/employee-grid/div[2]/div/div/kendo-grid/div/kendo-grid-list/div/div[1]/table"
-			+ "/tbody/tr[2]/td[2]/div/sub-grid/div/div/div/div/form/div/div[3]/a")
+	@FindBy(xpath = "//div[@id = 'GroupAssignmen']//a")
 	WebElement save;
 	
-	@FindBy(xpath = "//li[contains(.,'مسئول پشتیبان گروه 1')]")
-	WebElement karbar;
+	
+	@FindBy(xpath = "//button[text()='بله']")
+	WebElement Confirm;
+	
 	
 	public void EntesabKarmand() throws InterruptedException {
 		Thread.sleep(3000);
@@ -62,34 +57,21 @@ public class EntesabKarmand {
 		Thread.sleep(2000);
 		Expand.click();
 		Thread.sleep(500);
-		Roles.click();
-		
-		Roles.click();
-//		Roles.sendKeys(Keys.DOWN);
-//		Roles.sendKeys(Keys.DOWN);
-//		Roles.sendKeys(Keys.DOWN);
-//		Roles.sendKeys(Keys.DOWN);
-//		Roles.sendKeys(Keys.DOWN);
-//		Roles.sendKeys(Keys.DOWN);
-//		Roles.sendKeys(Keys.DOWN);
-//		Roles.sendKeys(Keys.ENTER);
-		//Roles.sendKeys(Keys.TAB);
-		
-		Thread.sleep(3000);
-		Roles2.click();
-		Thread.sleep(500);
-	
-		test.click();
+		Roles.sendKeys("منابع");
+
+		Roles.sendKeys(Keys.ENTER);
 		
 
-//		Roles2.sendKeys(Keys.DOWN);
+		Role2.click();
+		Thread.sleep(1000);
+
+		Role2.sendKeys(Keys.DOWN);
+		Role2.sendKeys(Keys.ENTER);
 		
+		Thread.sleep(3000);
 		
-		Thread.sleep(500);
 		save.click();
-	
-		
-	
+		Confirm.click();
 		
 		Thread.sleep(3000);
 	

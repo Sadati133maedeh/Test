@@ -53,8 +53,7 @@ public class AddUser_TC {
 	  
 	  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	  
-	  driver.findElement(By.xpath("/html/body/app-root/div/app-layout/div/div/div[2]/div/div[2]/his-home"
-	  		+ "/div/div/div/div/nav/div/div[3]/a")).click();     //login to hr
+	  driver.findElement(By.xpath("//*[text() = 'مدیریت منابع انسانی']")).click();     //login to hr
 	  
 	  for(String window : driver.getWindowHandles()) {
 		  driver.switchTo().window(window);
@@ -62,8 +61,7 @@ public class AddUser_TC {
 	  
 	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	  
-	  driver.findElement(By.xpath("/html/body/app-root/div/app-hr-layout/div/div/div/"
-	  		+ "app-employee-list/div/div[2]/div[2]/button[1]")).click();   //click on afzudan
+	  driver.findElement(By.xpath("//img[@class ='add-btn' ]")).click();   //click on afzudan
 	  
 	  Adduser add = PageFactory.initElements(driver, Adduser.class);
 	  add.AddEmploye(  Name ,  familyName ,  fatherName ,  sex , birhtDate ,
