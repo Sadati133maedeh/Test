@@ -131,8 +131,32 @@ public class DataProviders {
 		reader.close();
 		return myEntries.iterator();
 	}
-
-
+	
+	@DataProvider(name = "CheckCopyServiceName")
+	public Iterator<Object[]> CheckCopyServiceName() throws IOException{
+		CSVReader reader = new CSVReader(
+				new FileReader("./src/test/resources/data/CSVFiles_GV/CheckCopyServiceName.csv"),',','\'',1);
+		List<Object[]> myEntries = new ArrayList<Object[]>();
+		String[] nextLine;
+		while ((nextLine=reader.readNext())!=null) {
+			myEntries.add(nextLine);
+		}
+		reader.close();
+		return myEntries.iterator();
+	}
+	
+	@DataProvider(name = "AddTarrif")
+	public Iterator<Object[]> AddTarrif() throws IOException{
+		CSVReader reader = new CSVReader(
+				new FileReader("./src/test/resources/data/CSVFiles_GV/AddTarrif.csv"),',','\'',1);
+		List<Object[]> myEntries = new ArrayList<Object[]>();
+		String[] nextLine;
+		while ((nextLine=reader.readNext())!=null) {
+			myEntries.add(nextLine);
+		}
+		reader.close();
+		return myEntries.iterator();
+	}
 
 
 

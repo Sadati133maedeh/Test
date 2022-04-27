@@ -130,28 +130,56 @@ public class PageObject_center_services {
   public void CopyCenterServices ( WebDriver driver , String beginCenterGroup ,String beginCentreName, String destinationCenterGroup ,String destinationCentreName) throws InterruptedException {
 	   Actions action = new Actions(driver);
 	   action
-	     .click(BeginCenterGroup)
-	     .sendKeys(beginCenterGroup)
-	     .sendKeys(Keys.ENTER)
-	     .perform();
+	     .click(BeginCenterGroup).perform();
+	   Thread.sleep(500);
+
+	   action
+	     .sendKeys(beginCenterGroup).perform();
+	   Thread.sleep(500);
+
+	   action
+	     .sendKeys(Keys.ENTER).perform();
+	   Thread.sleep(500);
+
 		  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
 		 action
-		   .click(BeginCentreName)
-		   .sendKeys(beginCentreName)
-		   .sendKeys(Keys.ENTER)
-		   .perform();
+		   .click(BeginCentreName).perform();
+		   Thread.sleep(500);
+
+		 action
+		   .sendKeys(beginCentreName).perform();
+		   Thread.sleep(500);
+
+		 action
+		   .sendKeys(Keys.ENTER).perform();
+		   Thread.sleep(500);
+
 			  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);
 		 action
-		    .click(DestinationCenterGroup)
-			.sendKeys(destinationCenterGroup)
-			.sendKeys(Keys.ENTER)
-		    .perform();
+		    .click(DestinationCenterGroup).perform();
+		   Thread.sleep(500);
+
+		 action
+			.sendKeys(destinationCenterGroup).perform();
+		   Thread.sleep(500);
+
+		 action
+			.sendKeys(Keys.ENTER).perform();
+		   Thread.sleep(500);
+
 			   driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
 		 action
-			 .click(DestinationCentreName)
-			 .sendKeys(destinationCentreName)
-			 .sendKeys(Keys.ENTER)
-			 .perform();
+			 .click(DestinationCentreName).perform();
+		   Thread.sleep(500);
+
+		 action
+			 .sendKeys(destinationCentreName).perform();
+		   Thread.sleep(500);
+
+		 action
+			 .sendKeys(Keys.ENTER).perform();
+		   Thread.sleep(500);
+
 				 driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
 		action.click(Copy).perform();
 
@@ -159,7 +187,7 @@ public class PageObject_center_services {
 	   
   }
   
-  public void Check_CopyCenterServices ( WebDriver driver , String maingroup ,String newservicename, String maingroup2 ,String newservicename2) throws InterruptedException {
+  public void Check_CopyCenterServices ( WebDriver driver , String maingroup ,String newservicename, String maingroup2 ,String newservicename2, String RVU, String RVU2) throws InterruptedException {
 	   Actions action = new Actions(driver);
 	   //چک درج نام اختصاری 1
 	   action
@@ -173,11 +201,22 @@ public class PageObject_center_services {
 	   .sendKeys(Keys.ENTER)
 	   .perform();
 	   Thread.sleep(3000);
+	   action
+	   .click(SearchRVUcode)
+	   .sendKeys(RVU)
+	   .sendKeys(Keys.ENTER)
+	   .perform();
+	   Thread.sleep(1000);
+
 	       driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
-	   WebElement clippingServiceName= driver.findElement(By.xpath("//mat-table[@role='grid']/mat-row[2]/mat-cell[4]/descendant::input"));
-	 String  newNameAdded=clippingServiceName.getText();
+	   WebElement clippingServiceName= driver.findElement(By.xpath("//mat-table[@role='grid']/mat-row[1]/mat-cell[4]/descendant::input"));
+	   
+	 String  newNameAdded=clippingServiceName.getAttribute("value");
+	 System.out.println("wwwww" + newNameAdded);
 	 Assert.assertEquals(newNameAdded, newservicename);
 	   eh.highlightElement(driver,clippingServiceName);
+	   action
+	   .click(Refresh).perform();
 
 	   //چک درج نام اختصاری 2
 	   action
@@ -191,9 +230,16 @@ public class PageObject_center_services {
 	   .sendKeys(Keys.ENTER)
 	   .perform();
 	   Thread.sleep(3000);
+	   action
+	   .click(SearchRVUcode)
+	   .sendKeys(RVU2)
+	   .sendKeys(Keys.ENTER)
+	   .perform();
+	   Thread.sleep(1000);
+
 		  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
-	   WebElement clippingServiceName2= driver.findElement(By.xpath("//mat-table[@role='grid']/mat-row[2]/mat-cell[4]/descendant::input"));
-		 String  newNameAdded2=clippingServiceName2.getText();
+	   WebElement clippingServiceName2= driver.findElement(By.xpath("//mat-table[@role='grid']/mat-row[1]/mat-cell[4]/descendant::input"));
+		 String  newNameAdded2=clippingServiceName2.getAttribute("value");
 		 Assert.assertEquals(newNameAdded2, newservicename2);
 		   eh.highlightElement(driver,clippingServiceName2);
 		   Thread.sleep(3000);
