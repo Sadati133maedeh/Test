@@ -49,8 +49,7 @@ public class BazyabiRamz_TC {
 	  
 	driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 	
-	driver.findElement(By.xpath("/html/body/app-root/div/app-layout/div/div/div[2]/div/"
-			+ "div[2]/his-home/div/div/div/div/nav/div/div[3]/a")).click();  //click on hr
+	driver.findElement(By.xpath("//*[text()= 'مدیریت منابع انسانی']")).click();  //click on hr
 	 
 	  String window1 = driver.getCurrentUrl();  //Switch be safhe etelaate karbaran
 	  for(String window2 :driver.getWindowHandles()) {

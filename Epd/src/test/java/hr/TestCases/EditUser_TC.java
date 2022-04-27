@@ -50,8 +50,7 @@ public class EditUser_TC {
 	  
 	  driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
 	  
-	  driver.findElement(By.xpath("/html/body/app-root/div/app-layout/div/div/div[2]/div/div[2]"
-	  		+ "/his-home/div/div/div/div/nav/div/div[3]")).click();    //click on hr
+	  driver.findElement(By.xpath("//*[text()= 'مدیریت منابع انسانی']")).click();    //click on hr
 	  
 	  for(String window : driver.getWindowHandles()) {
 		  driver.switchTo().window(window);
