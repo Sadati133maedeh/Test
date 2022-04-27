@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-25T11:08:33Z" name="Default suite" finished-at="2022-04-25T11:10:44Z" duration-ms="131113">
+  <suite started-at="2022-04-26T11:34:18Z" name="Default suite" finished-at="2022-04-26T11:35:52Z" duration-ms="94362">
     <groups>
     </groups>
-    <test started-at="2022-04-25T11:08:33Z" name="Default test" finished-at="2022-04-25T11:10:44Z" duration-ms="131113">
-      <class name="GV.TestCases.TestCase_Service_SearchService">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:GV.TestCases.TestCase_Service_SearchService@470734c3]" started-at="2022-04-25T15:38:33Z" name="beforeMethod" finished-at="2022-04-25T15:38:41Z" duration-ms="8305" status="PASS">
+    <test started-at="2022-04-26T11:34:18Z" name="Default test" finished-at="2022-04-26T11:35:52Z" duration-ms="94362">
+      <class name="GV.TestCases.TestCase_Copy_Center_Services">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:GV.TestCases.TestCase_Copy_Center_Services@4b45a2f5]" started-at="2022-04-26T16:04:18Z" name="beforeMethod" finished-at="2022-04-26T16:04:19Z" duration-ms="1610" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:GV.TestCases.TestCase_Service_SearchService@470734c3]" started-at="2022-04-25T15:38:41Z" name="f" data-provider="Service_Search" finished-at="2022-04-25T15:40:44Z" duration-ms="122702" status="PASS">
+        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:GV.TestCases.TestCase_Copy_Center_Services@4b45a2f5]" started-at="2022-04-26T16:04:19Z" name="f" data-provider="CopyServiceName" finished-at="2022-04-26T16:05:52Z" duration-ms="92708" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -30,28 +30,91 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[آمبولانس تيپA شهرستان]]>
+                <![CDATA[http://79.175.176.91:8010]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[ميکروتراپي (PRT يا Facet therapy) به ازاي هر 3 تزريق اضافه]]>
+                <![CDATA[0012768049]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[705330]]>
+                <![CDATA[c38aiMZ]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[http://79.175.176.91:8013]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[0046651357]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[9Y53hg1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[جراحی]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[شبکه هايپوگاستريک ]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[خدمات]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[تزریق شریانی]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[پلی]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[خصوصی نمونه]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[بیمارستانهای خصوصی]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[نمونه]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'System info: host: 'PAYVAND135', ip: '192.168.5.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'System info: host: 'PAYVAND135', ip: '192.168.5.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'Driver info: driver.version: RemoteWebDriverat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)at org.openqa.selenium.By$ByXPath.findElement(By.java:353)at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)at com.sun.proxy.$Proxy13.getWrappedElement(Unknown Source)at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:51)at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:480)at cis.cispackage.element_Highlight.highlightElement(element_Highlight.java:11)at GV.PageObject.PageObgectLogin.login(PageObgectLogin.java:36)at GV.TestCases.TestCase_Copy_Center_Services.f(TestCase_Copy_Center_Services.java:85)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:564)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:GV.TestCases.TestCase_Service_SearchService@470734c3]" started-at="2022-04-25T15:40:44Z" name="afterMethod" finished-at="2022-04-25T15:40:44Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:GV.TestCases.TestCase_Copy_Center_Services@4b45a2f5]" started-at="2022-04-26T16:05:52Z" name="afterMethod" finished-at="2022-04-26T16:05:52Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- GV.TestCases.TestCase_Service_SearchService -->
+      </class> <!-- GV.TestCases.TestCase_Copy_Center_Services -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
