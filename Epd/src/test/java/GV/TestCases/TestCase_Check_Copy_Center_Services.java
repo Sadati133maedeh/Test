@@ -29,22 +29,24 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
-public class TestCase_Copy_Center_Services {
+public class TestCase_Check_Copy_Center_Services {
       WebDriver driver;
       WebDriver driver2;
 
       
-  @Test(dataProvider="CopyServiceName",dataProviderClass=DataProviders.class)
-  public void f(String URL2 ,String UserName2 ,String Password2,String beginCenterGroup ,String beginCentreName, String destinationCenterGroup ,String destinationCentreName ) throws Throwable {
+  @Test(dataProvider="CheckCopyServiceName",dataProviderClass=DataProviders.class)
+  public void f(String URL3 ,String UserName3 ,String Password3, String maingroup ,String newservicename, String maingroup2 ,String newservicename2, String RVU, String RVU2 ) throws Throwable {
 	 
-	  driver.navigate().to(URL2);
+
+	  
+	  //Enter to destination Center
+	  driver.navigate().to(URL3);
 	  driver.manage().window().maximize();
-
-
+	
 	  //Login
 	  PageObgectLogin admLoginPage = 
 				PageFactory.initElements(driver, PageObgectLogin.class);
-		admLoginPage.login(driver, URL2 ,UserName2 , Password2);
+		admLoginPage.login(driver, URL3 ,UserName3 , Password3);
 		  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
 
 		
@@ -63,13 +65,10 @@ public class TestCase_Copy_Center_Services {
 	  Service.CenterServices_Icon(driver);
 	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);  
 
-	  //Copy Services Name
-	  PageObject_center_services Copy=PageFactory.initElements(driver, PageObject_center_services.class);
-	  Copy.CopyCenterServices(driver, beginCenterGroup, beginCentreName, destinationCenterGroup, destinationCentreName);	  
+	  //Check Copy Services Name
+	  PageObject_center_services CheckCopy=PageFactory.initElements(driver, PageObject_center_services.class);
+	  CheckCopy.Check_CopyCenterServices(driver, maingroup, newservicename, maingroup2, newservicename2,RVU,RVU2);
 	  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
-	  Thread.sleep(1000);
-
-	  
 
 	  
 	  
