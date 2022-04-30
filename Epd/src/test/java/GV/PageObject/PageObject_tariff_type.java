@@ -111,10 +111,14 @@ public class PageObject_tariff_type {
 		   action
 		   .click(SearchTariff)
 		   .sendKeys(Newtariff)
-		   .click(SearchButton)
+		   .click(SearchButton).perform();
+		   Thread.sleep(1000);
+		   action
 		   .click(FirstTrCheckbox)
 		   .click(Save)
-		   .click(Activ_DeActiv)
+		   .click(Activ_DeActiv).perform();
+		   Thread.sleep(1000);
+		   action
 		   .sendKeys(activ_deActiv).perform();
 		   Thread.sleep(500);
 		   action
@@ -127,12 +131,11 @@ public class PageObject_tariff_type {
 		   
 		   //Active
 		   action
-		   .click(SearchTariff)
-		   .sendKeys(Newtariff)
-		   .click(SearchButton)
 		   .click(FirstTrCheckbox)
 		   .click(Save)
-		   .click(Activ_DeActiv)
+		   .click(Activ_DeActiv).perform();
+		   Thread.sleep(1000);
+		   action
 		   .sendKeys(activ_deActiv).perform();
 		   Thread.sleep(500);
 		   action
@@ -143,10 +146,7 @@ public class PageObject_tariff_type {
 		   String Tarrif2= FirstTrTariff.getText();
 		   Assert.assertEquals(Tarrif2, Newtariff); 
 
-		   
-		   
-		   
-		   
+		      	   	   
 	   }
 	   public void Standardization ( WebDriver driver ,String tariff, String StandardTariff ) throws InterruptedException {
 		   
@@ -167,6 +167,8 @@ public class PageObject_tariff_type {
 		   .sendKeys(Keys.ENTER)
 		   .perform();
 		   eh.highlightElement(driver,PopUp); 
+		   String alert=PopUp.getText();
+	       Assert.assertTrue(alert.contains("موفقیت"));
 		   Thread.sleep(1000);
 		  String AddedStandard=StandardizationCombo.getText();
 		   driver.navigate().refresh();

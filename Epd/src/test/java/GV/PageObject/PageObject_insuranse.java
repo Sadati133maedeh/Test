@@ -289,6 +289,8 @@ public class PageObject_insuranse {
 	   .sendKeys(insuranceCode)
 	   .click(SearchButtom)
 	   .perform();
-	   AddedCode=FirstCodetd.getText();   
+	   AddedCode=FirstCodetd.getText(); 
+       Assert.assertEquals(AddedCode, insuranceCode);
+
    }
  }

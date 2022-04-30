@@ -9,6 +9,7 @@ import GV.PageObject.PageObject_DefinitionCenterParts;
 import GV.PageObject.PageObject_Landing;
 import GV.PageObject.PageObject_MainMenu;
 import GV.PageObject.PageObject_license;
+import GV.PageObject.PageObject_riali_K_tariff;
 import GV.PageObject.PageObject_speciality;
 import GV.PageObject.PageObject_tariff_type;
 
@@ -25,12 +26,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
-public class TestCase_AddTariff {
+public class TestCase_AddK {
       WebDriver driver;
       
       
-  @Test(dataProvider="AddTarrif",dataProviderClass=DataProviders.class)
-  public void f(String URL ,String UserName ,String Password,String tariff,String tariff2,String tariff3 ) throws Throwable {
+  @Test(dataProvider="AddK",dataProviderClass=DataProviders.class)
+  public void f(String URL ,String UserName ,String Password,String tariff,String contract,String k_herfeyi_Dakheli,String k_fani_Dakheli,String k_bihooshi_Dakheli,String h_herfeyi_Dakheli,String h_fani_Dakheli,String k_herfeyi_Dakheli_al,String k_fani_Dakheli_al,String k_bihooshi_Dakheli_al,String h_herfeyi_Dakheli_al,String h_fani_Dakheli_al ) throws Throwable {
 	 
 	  driver.navigate().to(URL);
 	  driver.manage().window().maximize();
@@ -52,14 +53,14 @@ public class TestCase_AddTariff {
 	  for(String window : driver.getWindowHandles() ) {
 		  driver.switchTo().window(window);
 	  }
-	  //Enter to Tariff Page
-	  PageObject_MainMenu Tariff=PageFactory.initElements(driver, PageObject_MainMenu.class);
-	  Tariff.Tariff_Icon(driver);
+	  //Enter to k Page
+	  PageObject_MainMenu k=PageFactory.initElements(driver, PageObject_MainMenu.class);
+	  k.RialiAdjustTriff_Icon(driver);
 	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);  
 
-	  //Add Tariffe
-	  PageObject_tariff_type Add=PageFactory.initElements(driver, PageObject_tariff_type.class);
-	  Add.Add_Tariff(driver, tariff, tariff2, tariff3);
+	  //Add k
+	  PageObject_riali_K_tariff Addk=PageFactory.initElements(driver, PageObject_riali_K_tariff.class);
+	  Addk.Add_k_Dakheli(driver, tariff, contract, k_herfeyi_Dakheli, k_fani_Dakheli, k_bihooshi_Dakheli, h_herfeyi_Dakheli, h_fani_Dakheli, k_herfeyi_Dakheli_al, k_fani_Dakheli_al, k_bihooshi_Dakheli_al, h_herfeyi_Dakheli_al, h_fani_Dakheli_al);
 	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);  
 
 	  
