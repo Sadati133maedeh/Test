@@ -158,6 +158,58 @@ public class DataProviders {
 		return myEntries.iterator();
 	}
 
+	@DataProvider(name = "EditTarrif")
+	public Iterator<Object[]> EditTarrif() throws IOException{
+		CSVReader reader = new CSVReader(
+				new FileReader("./src/test/resources/data/CSVFiles_GV/EditTarrif.csv"),',','\'',1);
+		List<Object[]> myEntries = new ArrayList<Object[]>();
+		String[] nextLine;
+		while ((nextLine=reader.readNext())!=null) {
+			myEntries.add(nextLine);
+		}
+		reader.close();
+		return myEntries.iterator();
+	}
+	
+	@DataProvider(name = "DeActiveActiveTarrif")
+	public Iterator<Object[]> DeActiveActiveTarrif() throws IOException{
+		CSVReader reader = new CSVReader(
+				new FileReader("./src/test/resources/data/CSVFiles_GV/DeActiveActiveTarrif.csv"),',','\'',1);
+		List<Object[]> myEntries = new ArrayList<Object[]>();
+		String[] nextLine;
+		while ((nextLine=reader.readNext())!=null) {
+			myEntries.add(nextLine);
+		}
+		reader.close();
+		return myEntries.iterator();
+	}
+	@DataProvider(name = "StandardizationTarrif")
+	public Iterator<Object[]> StandardizationTarrif() throws IOException{
+		CSVReader reader = new CSVReader(
+				new FileReader("./src/test/resources/data/CSVFiles_GV/StandardizationTarrif.csv"),',','\'',1);
+		List<Object[]> myEntries = new ArrayList<Object[]>();
+		String[] nextLine;
+		while ((nextLine=reader.readNext())!=null) {
+			myEntries.add(nextLine);
+		}
+		reader.close();
+		return myEntries.iterator();
+	}
+	@DataProvider(name = "AddK")
+	public Iterator<Object[]> AddK() throws IOException{
+		CSVReader reader = new CSVReader(
+				new FileReader("./src/test/resources/data/CSVFiles_GV/AddK.csv"),',','\'',1);
+		List<Object[]> myEntries = new ArrayList<Object[]>();
+		String[] nextLine;
+		while ((nextLine=reader.readNext())!=null) {
+			myEntries.add(nextLine);
+		}
+		reader.close();
+		return myEntries.iterator();
+	}
+
+
+
 
 
 
