@@ -2,56 +2,71 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-25T11:08:33Z" name="Default suite" finished-at="2022-04-25T11:10:44Z" duration-ms="131113">
+  <suite started-at="2022-04-27T06:29:11Z" name="Default suite" finished-at="2022-04-27T06:30:52Z" duration-ms="100806">
     <groups>
     </groups>
-    <test started-at="2022-04-25T11:08:33Z" name="Default test" finished-at="2022-04-25T11:10:44Z" duration-ms="131113">
-      <class name="GV.TestCases.TestCase_Service_SearchService">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:GV.TestCases.TestCase_Service_SearchService@470734c3]" started-at="2022-04-25T15:38:33Z" name="beforeMethod" finished-at="2022-04-25T15:38:41Z" duration-ms="8305" status="PASS">
+    <test started-at="2022-04-27T06:29:11Z" name="Default test" finished-at="2022-04-27T06:30:52Z" duration-ms="100806">
+      <class name="GV.TestCases.TestCase_Check_Copy_Center_Services">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:GV.TestCases.TestCase_Check_Copy_Center_Services@4b45a2f5]" started-at="2022-04-27T10:59:11Z" name="beforeMethod" finished-at="2022-04-27T10:59:13Z" duration-ms="1666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:GV.TestCases.TestCase_Service_SearchService@470734c3]" started-at="2022-04-25T15:38:41Z" name="f" data-provider="Service_Search" finished-at="2022-04-25T15:40:44Z" duration-ms="122702" status="PASS">
+        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:GV.TestCases.TestCase_Check_Copy_Center_Services@4b45a2f5]" started-at="2022-04-27T10:59:13Z" name="f" data-provider="CheckCopyServiceName" finished-at="2022-04-27T11:00:52Z" duration-ms="99107" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://79.175.176.91:8015]]>
+                <![CDATA[http://79.175.176.91:8014]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[0257794328]]>
+                <![CDATA[0613895649]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[RGF3MFw]]>
+                <![CDATA[xFb6unT]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[آمبولانس تيپA شهرستان]]>
+                <![CDATA[جراحی]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[ميکروتراپي (PRT يا Facet therapy) به ازاي هر 3 تزريق اضافه]]>
+                <![CDATA[شبکه هایپوگاستریک ]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[705330]]>
+                <![CDATA[خدمات]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[تزریق شریانی]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[601495]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[900025]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:GV.TestCases.TestCase_Service_SearchService@470734c3]" started-at="2022-04-25T15:40:44Z" name="afterMethod" finished-at="2022-04-25T15:40:44Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:GV.TestCases.TestCase_Check_Copy_Center_Services@4b45a2f5]" started-at="2022-04-27T11:00:52Z" name="afterMethod" finished-at="2022-04-27T11:00:52Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- GV.TestCases.TestCase_Service_SearchService -->
+      </class> <!-- GV.TestCases.TestCase_Check_Copy_Center_Services -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -40,129 +40,13 @@ public class PageObject_standardSection {
    @FindBy(xpath="")
    WebElement Refresh;
    
-   @FindBy(xpath="")
-   WebElement ;
    
-   @FindBy(xpath="")
-   WebElement ;
-   
-   @FindBy(xpath="")
-   WebElement ;
-
-   @FindBy(xpath="")
-   WebElement FirstNametd;
-
    PageObject_standardSection DeActive =new PageObject_standardSection();
 
 
 //نمایش لیست غیر فعال
    public void showDeActivesSection( WebDriver driver ) throws InterruptedException {
-	   Actions action = new Actions(driver);
-	   driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	   eh.highlightElement(driver,Active_Diactive);
-	   Thread.sleep(1000);
-	   Active_Diactive.click();
-	   eh.unhighlightLast(driver, Active_Diactive);
-	   action
-	   .sendKeys(Keys.UP)
-	   .sendKeys(Keys.ENTER).perform();
-	   Thread.sleep(1000);
-	   action.click(SearchButtom).perform();
-	   Thread.sleep(1000);
-
-   }
-   
-//اضافه کردن بخش
-   public void AddSection( WebDriver driver ,String sectionName ,String sectionName2 ,String sectionName3 ) throws InterruptedException {
 	   
-	   Actions action = new Actions(driver);
-	   
-//نمایش لیست غیر فعال
-	   PageObject_standardSection DeActive =new PageObject_standardSection();
-	   DeActive.showDeActivesSection(driver);
-//انتخاب و ذخیره بخش اول
-	   action
-	   .click(SearchName)
-	   .sendKeys(sectionName)
-	   .click(SearchButtom)
-	   .click(checkbox)
-	   .click(Save)
-	   .perform();
-	   Thread.sleep(2000);
-	   action.click(Refresh).perform();
-//چک اضافه شدن تخصص
-	   action
-	   .click(SearchCode)
-	   .sendKeys(specialitiyCode)
-	   .click(SearchButtom)
-	   .perform();
-	   AddedCode=FirstCodetd.getText();
-	   Assert.assertEquals(AddedCode, specialitiyCode);
-//انتخاب و ذخیره تخصص دوم
-	   action
-	   .click(SearchCode)
-	   .sendKeys(specialitiyCode2)
-	   .click(SearchButtom)
-	   .click(checkbox)
-	   .click(Save)
-	   .perform();
-	   Thread.sleep(2000);
-	   action.click(Refresh).perform();
-//چک اضافه شدن تخصص دوم	   
-	   action
-	   .click(SearchCode)
-	   .sendKeys(specialitiyCode2)
-	   .click(SearchButtom)
-	   .perform();
-	   AddedCode=FirstCodetd.getText();
-	   Assert.assertEquals(AddedCode, specialitiyCode);
- //انتخاب و ذخیره تخصص سوم
-	   action
-	   .click(SearchCode)
-	   .sendKeys(specialitiyCode3)
-	   .click(SearchButtom)
-	   .click(checkbox)
-	   .click(Save)
-	   .perform();
-	   Thread.sleep(2000);
-	   action.click(Refresh).perform();
-//چک اضافه شدن تخصص سوم	   
-	   action
-	   .click(SearchCode)
-	   .sendKeys(specialitiyCode3)
-	   .click(SearchButtom)
-	   .perform();
-	   AddedCode=FirstCodetd.getText();
-	   Assert.assertEquals(AddedCode, specialitiyCode);   
-	   
-   }
- //سرچ نام تخصص
-   public void SearchSpecialityName ( WebDriver driver ) throws InterruptedException {
-	   
-	   Actions action = new Actions(driver);
-	 //نمایش لیست غیرفعال
-	   DeActive.showDeActivesSpeciality(driver);
-//سرچ مورد ششم لیست
-	   SpecialityName=NameSpeciality6th.getText();
-	   action
-	   .click(SearchName)
-	   .sendKeys(SpecialityName)
-	   .click(SearchButtom)
-	   .perform();
-	   Assert.assertEquals(SpecialityName, FirstNametd);
-	   action.click(Refresh).perform();
-	 //نمایش لیست غیرفعال
-	   DeActive.showDeActivesSpeciality(driver);
-	 //سرچ مورد دوم لیست
-	   SpecialityName=NameSpeciality2th.getText();
-	   action
-	   .click(SearchName)
-	   .sendKeys(SpecialityName)
-	   .click(SearchButtom)
-	   .perform();
-	   Assert.assertEquals(SpecialityName, FirstNametd);
-	   action.click(Refresh).perform();
-   
    
    }   
  }
