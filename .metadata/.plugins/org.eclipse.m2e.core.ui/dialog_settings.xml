@@ -96,7 +96,11 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+<<<<<<< HEAD
+			<item value="D:\Test\Epd"/>
+=======
 			<item value="C:\Users\s.mollahasani\Test\Epd"/>
+>>>>>>> 14bef7bb1fa62391ffabffa46ac639b696ade406
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
