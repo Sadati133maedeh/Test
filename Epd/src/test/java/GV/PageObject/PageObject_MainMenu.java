@@ -237,7 +237,7 @@ public class PageObject_MainMenu {
 	   FinancialSettings.click();
 	   Thread.sleep(1000);
 	   Financial_RialiAdjustTriff.click();
-	   Thread.sleep(5000);
+	   Thread.sleep(7000);
    }
    public void FixedRialiAdjust_Icon( WebDriver driver) throws InterruptedException {
 	   
