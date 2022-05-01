@@ -31,7 +31,7 @@ public class TestCase_AddK {
       
       
   @Test(dataProvider="AddK",dataProviderClass=DataProviders.class)
-  public void f(String URL ,String UserName ,String Password,String tariff,String contract,String k_herfeyi_Dakheli,String k_fani_Dakheli,String k_bihooshi_Dakheli,String h_herfeyi_Dakheli,String h_fani_Dakheli,String k_herfeyi_Dakheli_al,String k_fani_Dakheli_al,String k_bihooshi_Dakheli_al,String h_herfeyi_Dakheli_al,String h_fani_Dakheli_al ) throws Throwable {
+  public void f(String URL ,String UserName ,String Password,String tariff,String tariff2,String contract,String k_herfeyi_Dakheli,String k_fani_Dakheli,String k_bihooshi_Dakheli,String h_herfeyi_Dakheli,String h_fani_Dakheli,String k_herfeyi_Dakheli_al,String k_fani_Dakheli_al,String k_bihooshi_Dakheli_al,String h_herfeyi_Dakheli_al,String h_fani_Dakheli_al,String k_herfeyi_Tebi,String k_fani_Dakheli_Tebi,String k_bihooshi_Tebi,String h_herfeyi_Tebi,String h_fani_Tebi,String k_herfeyi_Tebi_en,String k_fani_Tebi_en,String k_bihooshi_Tebi_en,String h_herfeyi_Tebi_en,String h_fani_Tebi_en,String k_herfeyi_Tasvir,String k_fani_Tasvir,String k_bihooshi_Tasvir,String h_herfeyi_Tasvir,String h_fani_Tasvir,String k_herfeyi_Tasvir_mri,String k_fani_Tasvir_mri,String k_bihooshi_Tasvir_mri,String h_herfeyi_Tasvir_mri,String h_fani_Tasvir_mri,String k_herfeyi_Jarahi,String k_fani_Jarahi,String k_bihooshi_Jarahi,String h_herfeyi_Jarahi,String h_fani_Jarahi,String k_herfeyi_Jarahi_Taz,String k_fani_Jarahi_Taz,String k_bihooshi_Jarahi_Taz,String h_herfeyi_Jarahi_Taz,String h_fani_Jarahi_Taz ,String k_herfeyi_Jarahi2,String k_fani_Jarahi2,String k_bihooshi_Jarahi2	,String h_herfeyi_Jarahi2,String h_fani_Jarahi2,String k_herfeyi_Jarahi_Taz2	,String k_fani_Jarahi_Taz2,String k_bihooshi_Jarahi_Taz2,String h_herfeyi_Jarahi_Taz2,String h_fani_Jarahi_Taz2) throws Throwable {
 	 
 	  driver.navigate().to(URL);
 	  driver.manage().window().maximize();
@@ -60,7 +60,7 @@ public class TestCase_AddK {
 
 	  //Add k
 	  PageObject_riali_K_tariff Addk=PageFactory.initElements(driver, PageObject_riali_K_tariff.class);
-	  Addk.Add_k_Dakheli(driver, tariff, contract, k_herfeyi_Dakheli, k_fani_Dakheli, k_bihooshi_Dakheli, h_herfeyi_Dakheli, h_fani_Dakheli, k_herfeyi_Dakheli_al, k_fani_Dakheli_al, k_bihooshi_Dakheli_al, h_herfeyi_Dakheli_al, h_fani_Dakheli_al);
+	  Addk.Add_k(driver, tariff, tariff2, contract, k_herfeyi_Dakheli_al, k_fani_Dakheli_al, k_bihooshi_Dakheli_al, h_herfeyi_Dakheli_al, h_fani_Dakheli_al, k_herfeyi_Dakheli_al, k_fani_Dakheli_al, k_bihooshi_Dakheli_al, h_herfeyi_Dakheli_al, h_fani_Dakheli_al, k_herfeyi_Tebi, k_fani_Dakheli_Tebi, k_bihooshi_Tebi, h_herfeyi_Tebi, h_fani_Tebi, k_herfeyi_Tebi_en, k_fani_Tebi_en, k_bihooshi_Tebi_en, h_herfeyi_Tebi_en, h_fani_Tebi_en, k_herfeyi_Tasvir, k_fani_Tasvir, k_bihooshi_Tasvir, h_herfeyi_Tasvir, h_fani_Tasvir, k_herfeyi_Tasvir_mri, k_fani_Tasvir_mri, k_bihooshi_Tasvir_mri, h_herfeyi_Tasvir_mri, h_fani_Tasvir_mri, k_herfeyi_Jarahi, k_fani_Jarahi, k_bihooshi_Jarahi, h_herfeyi_Jarahi, h_fani_Jarahi, k_herfeyi_Jarahi_Taz, k_fani_Jarahi_Taz, k_bihooshi_Jarahi_Taz, h_herfeyi_Jarahi_Taz, h_fani_Jarahi_Taz, k_herfeyi_Jarahi2, k_fani_Jarahi2,k_bihooshi_Jarahi2	,h_herfeyi_Jarahi2,h_fani_Jarahi2,k_herfeyi_Jarahi_Taz2	,k_fani_Jarahi_Taz2,k_bihooshi_Jarahi_Taz2, h_herfeyi_Jarahi_Taz2,h_fani_Jarahi_Taz2);
 	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);  
 
 	  
