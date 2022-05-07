@@ -207,10 +207,34 @@ public class DataProviders {
 		reader.close();
 		return myEntries.iterator();
 	}
+	
+	@DataProvider(name = "EditTarrifK")
+	public Iterator<Object[]> EditTarrifK() throws IOException{
+		CSVReader reader = new CSVReader(
+				new FileReader("./src/test/resources/data/CSVFiles_GV/EditTarrifK.csv"),',','\'',1);
+		List<Object[]> myEntries = new ArrayList<Object[]>();
+		String[] nextLine;
+		while ((nextLine=reader.readNext())!=null) {
+			myEntries.add(nextLine);
+		}
+		reader.close();
+		return myEntries.iterator();
 
+	}
+	
+	@DataProvider(name = "DeleteTariffk")
+	public Iterator<Object[]>DeleteTariffk () throws IOException{
+		CSVReader reader = new CSVReader(
+				new FileReader("./src/test/resources/data/CSVFiles_GV/DeleteTariffk.csv"),',','\'',1);
+		List<Object[]> myEntries = new ArrayList<Object[]>();
+		String[] nextLine;
+		while ((nextLine=reader.readNext())!=null) {
+			myEntries.add(nextLine);
+		}
+		reader.close();
+		return myEntries.iterator();
 
-
-
+	}
 
 
 } 

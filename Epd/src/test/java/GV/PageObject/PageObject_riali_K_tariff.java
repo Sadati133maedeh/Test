@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -653,29 +654,124 @@ public class PageObject_riali_K_tariff {
 
 	}
 	   
-	   public void Edit_Tariff( WebDriver driver ,String Newtariff ,String tariff2) throws InterruptedException {
+	   public void Edit_Tariff_k ( WebDriver driver ,String Newtariff ,String tariff) throws InterruptedException {
 		   Actions action = new Actions(driver);
-//		   WebElement FirstTrTariff=driver.findElement(By.xpath("//tbody/tr/td[2]"));
-//		   WebElement FirstPenTariff=driver.findElement(By.xpath("//mat-icon[text()='edit']"));
-//		   WebElement EditButton1 =driver.findElement(By.xpath("//button[text()='ویرایش']"));
-//		   action
-//		   .click(SearchTariff)
-//		   .sendKeys(tariff2)
-//		   .click(SearchButton)
-//		   .click(FirstPenTariff)
-//		   .click(TarrifeName)
-//		   .perform();
-//		   TarrifeName.clear();
-//		   Thread.sleep(1000);
-//		   action
-//		   .click(TarrifeName)
-//		   .sendKeys(Newtariff)
-//		   .click(EditButton1)
-//		   .perform();
-//		   Thread.sleep(1000);
-//		   String EditedTarrif= FirstTrTariff.getText();
-//		   Assert.assertEquals(EditedTarrif, Newtariff);
+		   //ادیت تعرفه جرااحی
+		   action
+		   .click(TarrifeType).perform();
+		   Thread.sleep(1000);
+		   action
+		  .sendKeys(tariff).perform();
+		   Thread.sleep(1000);
+		   action
+		   .sendKeys(Keys.ENTER).perform();
+		   Thread.sleep(1000);
 
+		   WebElement EditJarahi1= driver.findElement(By.xpath("//tr[3]/td[10]/div[1]"));
+
+		   action
+		   .click(EditJarahi1).perform();
+		   Thread.sleep(1000);
+		   
+		   WebElement K_herfeyi_Jarahi= driver.findElement(By.xpath("//tr[3]/td[3]/descendant::input"));
+		   action
+		   .click(K_herfeyi_Jarahi)
+		   .sendKeys(Keys.HOME)
+		   .sendKeys(Keys.DELETE)
+		   .sendKeys(Keys.DELETE)
+		   .sendKeys(Keys.DELETE)
+		   .sendKeys(Keys.DELETE)
+		   .sendKeys(Newtariff)
+		   .perform();
+		   Thread.sleep(2000);
+		   WebElement EditJarahi2= driver.findElement(By.xpath("//tr[3]/td[10]/div[1]"));
+
+		   action
+		   .click(EditJarahi2).perform();
+		   Thread.sleep(1000);
+		  
+		   
+		   //رفرش صفحه
+		   driver.navigate().refresh();
+			  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS); 
+			   Thread.sleep(2000);
+			   action
+			   .click(TarrifeType).perform();
+			   Thread.sleep(1000);
+			   action
+			  .sendKeys(tariff).perform();
+			   Thread.sleep(1000);
+			   action
+			   .sendKeys(Keys.ENTER).perform();
+			   Thread.sleep(1000);
+			   //چک ادیت تعرفه جراحی
+			   WebElement K_herfeyi_Jarahi_td= driver.findElement(By.xpath("//tr[3]/td[3]"));
+			   String EditedK_herfeyi_jarahi = K_herfeyi_Jarahi_td.getText();
+			   Assert.assertEquals(EditedK_herfeyi_jarahi, Newtariff);
+			   eh.highlightElement(driver,K_herfeyi_Jarahi_td); 
+
+
+		   
 	}
+	   
+	   public void Delete_Tariff_k ( WebDriver driver,String tariff,String contract ) throws InterruptedException {
+		   Actions action = new Actions(driver);
+		   action
+		   .click(TarrifeType).perform();
+		   Thread.sleep(1000);
+		   action
+		  .sendKeys(tariff).perform();
+		   Thread.sleep(1000);
+		   action
+		   .sendKeys(Keys.ENTER).perform();
+		   Thread.sleep(1000);
+		   
+		   WebElement DeleteTariffK= driver.findElement(By.xpath("//tr[1]/td[10]/div[2]"));
+		   action
+		   .click(DeleteTariffK)
+		   .perform();
+		   Thread.sleep(1000);
+		   
+		   WebElement YesKeyDeleteTariffK= driver.findElement(By.xpath("//button[text()='بله']"));
+		   action
+		   .click(YesKeyDeleteTariffK)
+		   .perform();
+		   Thread.sleep(5000);
+		   // چک کردن حذف تعرفه گروه اصلی
+		   WebElement K_herfeyi_Tebi_td= driver.findElement(By.xpath("//tr[1]/td[3]"));
 
+		   String AddedK_herfeyi2 = K_herfeyi_Tebi_td.getText();
+		   Assert.assertEquals(AddedK_herfeyi2, "");
+		   eh.highlightElement(driver,K_herfeyi_Tebi_td); 
+		   
+		   // چک کردن حذف تعرفه زیر گروه
+		   WebElement expand2_Tebi= driver.findElement(By.xpath("//tr[1]/td[2]/descendant::i"));
+		   action
+		   .click(expand2_Tebi).perform();
+		   
+		   WebElement ContractName5= driver.findElement(By.xpath("(//mat-select[@role='combobox'])[2]"));
+		   action
+		   .click(ContractName5).perform();
+		   Thread.sleep(1000);
+		   action
+		   .sendKeys(contract).perform();
+		   Thread.sleep(1000);
+		   action
+		   .sendKeys(Keys.ENTER).perform();
+		   Thread.sleep(2000);
+
+
+		   WebElement K_herfeyi_Tebi_td_en= driver.findElement(By.xpath("//tr[3]/td[3]"));
+
+		   String AddedK_herfeyi_td1 = K_herfeyi_Tebi_td_en.getText();
+		   Assert.assertEquals(AddedK_herfeyi_td1, "");
+		   eh.highlightElement(driver,K_herfeyi_Tebi_td_en); 
+
+
+		   
+		   
+
+		   
+
+	   }
 }

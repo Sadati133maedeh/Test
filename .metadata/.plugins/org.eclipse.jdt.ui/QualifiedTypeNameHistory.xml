@@ -1,31 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.openqa.selenium.By.ByXPath"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
-    <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
-    <fullyQualifiedTypeName name="CenterPackages.pageobjects.login"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
-    <fullyQualifiedTypeName name="GV.PageObject.PageObject_services"/>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="GV.PageObject.PageObject_group_services"/>
-<<<<<<< HEAD
-    <fullyQualifiedTypeName name="org.openqa.selenium.remote.SessionId"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.remote.RemoteWebDriver"/>
-    <fullyQualifiedTypeName name="GV.PageObject.PageObject_center_services"/>
-    <fullyQualifiedTypeName name="GV.PageObject.PageObject_tariff_type"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
-=======
-    <fullyQualifiedTypeName name="GV.PageObject.PageObject_center_services"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.remote.SessionId"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.remote.RemoteWebDriver"/>
-    <fullyQualifiedTypeName name="GV.PageObject.PageObject_riali_K_tariff"/>
->>>>>>> ec6daa5a444d7d2588aadc4eb82d90e773297051
     <fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
 </qualifiedTypeNameHistroy>
