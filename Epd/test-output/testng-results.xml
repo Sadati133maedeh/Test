@@ -2,71 +2,306 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-27T06:29:11Z" name="Default suite" finished-at="2022-04-27T06:30:52Z" duration-ms="100806">
+  <suite started-at="2022-05-07T07:01:15Z" name="Default suite" finished-at="2022-05-07T07:04:54Z" duration-ms="219394">
     <groups>
     </groups>
-    <test started-at="2022-04-27T06:29:11Z" name="Default test" finished-at="2022-04-27T06:30:52Z" duration-ms="100806">
-      <class name="GV.TestCases.TestCase_Check_Copy_Center_Services">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:GV.TestCases.TestCase_Check_Copy_Center_Services@4b45a2f5]" started-at="2022-04-27T10:59:11Z" name="beforeMethod" finished-at="2022-04-27T10:59:13Z" duration-ms="1666" status="PASS">
+    <test started-at="2022-05-07T07:01:15Z" name="Default test" finished-at="2022-05-07T07:04:54Z" duration-ms="219394">
+      <class name="GV.TestCases.TestCase_AddK">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:GV.TestCases.TestCase_AddK@4b45a2f5]" started-at="2022-05-07T11:31:15Z" name="beforeMethod" finished-at="2022-05-07T11:31:16Z" duration-ms="1632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:GV.TestCases.TestCase_Check_Copy_Center_Services@4b45a2f5]" started-at="2022-04-27T10:59:13Z" name="f" data-provider="CheckCopyServiceName" finished-at="2022-04-27T11:00:52Z" duration-ms="99107" status="PASS">
+        <test-method signature="f(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:GV.TestCases.TestCase_AddK@4b45a2f5]" started-at="2022-05-07T11:31:16Z" name="f" data-provider="AddK" finished-at="2022-05-07T11:34:54Z" duration-ms="217731" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://79.175.176.91:8014]]>
+                <![CDATA[http://79.175.176.91:8015]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[0613895649]]>
+                <![CDATA[0257794328]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[xFb6unT]]>
+                <![CDATA[RGF3MFw]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[جراحی]]>
+                <![CDATA[پلی کلینیک دولتی]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[شبکه هایپوگاستریک ]]>
+                <![CDATA[پلی کلینیک آزاد  ]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[خدمات]]>
+                <![CDATA[قرارداد آموزش و پرورش]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[تزریق شریانی]]>
+                <![CDATA[5486]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[601495]]>
+                <![CDATA[6982]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[900025]]>
+                <![CDATA[326]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[98541]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[587]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[777]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[8888]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[9999]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[5555]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[786786]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[786]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[78]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[576]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[786]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[12396]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[748]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[69300]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[7800]]>
+              </value>
+            </param>
+            <param index="24">
+              <value>
+                <![CDATA[86230]]>
+              </value>
+            </param>
+            <param index="25">
+              <value>
+                <![CDATA[8960]]>
+              </value>
+            </param>
+            <param index="26">
+              <value>
+                <![CDATA[44500]]>
+              </value>
+            </param>
+            <param index="27">
+              <value>
+                <![CDATA[2100]]>
+              </value>
+            </param>
+            <param index="28">
+              <value>
+                <![CDATA[6500]]>
+              </value>
+            </param>
+            <param index="29">
+              <value>
+                <![CDATA[7800]]>
+              </value>
+            </param>
+            <param index="30">
+              <value>
+                <![CDATA[85500]]>
+              </value>
+            </param>
+            <param index="31">
+              <value>
+                <![CDATA[5200]]>
+              </value>
+            </param>
+            <param index="32">
+              <value>
+                <![CDATA[4500]]>
+              </value>
+            </param>
+            <param index="33">
+              <value>
+                <![CDATA[65500]]>
+              </value>
+            </param>
+            <param index="34">
+              <value>
+                <![CDATA[5400]]>
+              </value>
+            </param>
+            <param index="35">
+              <value>
+                <![CDATA[4500]]>
+              </value>
+            </param>
+            <param index="36">
+              <value>
+                <![CDATA[480]]>
+              </value>
+            </param>
+            <param index="37">
+              <value>
+                <![CDATA[4800]]>
+              </value>
+            </param>
+            <param index="38">
+              <value>
+                <![CDATA[968700]]>
+              </value>
+            </param>
+            <param index="39">
+              <value>
+                <![CDATA[7800]]>
+              </value>
+            </param>
+            <param index="40">
+              <value>
+                <![CDATA[4120]]>
+              </value>
+            </param>
+            <param index="41">
+              <value>
+                <![CDATA[690]]>
+              </value>
+            </param>
+            <param index="42">
+              <value>
+                <![CDATA[7480]]>
+              </value>
+            </param>
+            <param index="43">
+              <value>
+                <![CDATA[480]]>
+              </value>
+            </param>
+            <param index="44">
+              <value>
+                <![CDATA[8600]]>
+              </value>
+            </param>
+            <param index="45">
+              <value>
+                <![CDATA[48700]]>
+              </value>
+            </param>
+            <param index="46">
+              <value>
+                <![CDATA[8600]]>
+              </value>
+            </param>
+            <param index="47">
+              <value>
+                <![CDATA[78500]]>
+              </value>
+            </param>
+            <param index="48">
+              <value>
+                <![CDATA[6300]]>
+              </value>
+            </param>
+            <param index="49">
+              <value>
+                <![CDATA[630]]>
+              </value>
+            </param>
+            <param index="50">
+              <value>
+                <![CDATA[750]]>
+              </value>
+            </param>
+            <param index="51">
+              <value>
+                <![CDATA[450]]>
+              </value>
+            </param>
+            <param index="52">
+              <value>
+                <![CDATA[680]]>
+              </value>
+            </param>
+            <param index="53">
+              <value>
+                <![CDATA[78520]]>
+              </value>
+            </param>
+            <param index="54">
+              <value>
+                <![CDATA[860]]>
+              </value>
+            </param>
+            <param index="55">
+              <value>
+                <![CDATA[480]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:GV.TestCases.TestCase_Check_Copy_Center_Services@4b45a2f5]" started-at="2022-04-27T11:00:52Z" name="afterMethod" finished-at="2022-04-27T11:00:52Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:GV.TestCases.TestCase_AddK@4b45a2f5]" started-at="2022-05-07T11:34:54Z" name="afterMethod" finished-at="2022-05-07T11:34:54Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- GV.TestCases.TestCase_Check_Copy_Center_Services -->
+      </class> <!-- GV.TestCases.TestCase_AddK -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

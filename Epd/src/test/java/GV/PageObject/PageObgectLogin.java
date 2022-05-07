@@ -1,5 +1,7 @@
 package GV.PageObject;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -52,6 +54,7 @@ public class PageObgectLogin {
 		loginbutton.click();
 		eh.unhighlightLast(driver, loginbutton);
 	    Thread.sleep(3000);
+		  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS);  
 
 
 	}

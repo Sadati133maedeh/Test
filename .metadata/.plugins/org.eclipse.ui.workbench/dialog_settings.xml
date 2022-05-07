@@ -24,6 +24,9 @@
 			<item value="org.eclipse.m2e"/>
 		</list>
 	</section>
+<<<<<<< HEAD
+=======
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
 	</section>
+>>>>>>> 14bef7bb1fa62391ffabffa46ac639b696ade406
 </section>

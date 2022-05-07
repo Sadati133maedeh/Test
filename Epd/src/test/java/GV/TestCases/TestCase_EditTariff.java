@@ -25,12 +25,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
-public class TestCase_AddTariff {
+public class TestCase_EditTariff {
       WebDriver driver;
       
       
-  @Test(dataProvider="AddTarrif",dataProviderClass=DataProviders.class)
-  public void f(String URL ,String UserName ,String Password,String tariff,String tariff2,String tariff3 ) throws Throwable {
+  @Test(dataProvider="EditTarrif",dataProviderClass=DataProviders.class)
+  public void f(String URL ,String UserName ,String Password,String Newtariff ,String tariff2 ) throws Throwable {
 	 
 	  driver.navigate().to(URL);
 	  driver.manage().window().maximize();
@@ -57,9 +57,9 @@ public class TestCase_AddTariff {
 	  Tariff.Tariff_Icon(driver);
 	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);  
 
-	  //Add Tariffe
-	  PageObject_tariff_type Add=PageFactory.initElements(driver, PageObject_tariff_type.class);
-	  Add.Add_Tariff(driver, tariff, tariff2, tariff3);
+	  //Edit Tariffe
+	  PageObject_tariff_type Edit=PageFactory.initElements(driver, PageObject_tariff_type.class);
+	  Edit.Edit_Tariff(driver, Newtariff, tariff2);
 	  driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);  
 
 	  

@@ -216,6 +216,8 @@ public class PageObject_MainMenu {
 	   Thread.sleep(1000);
 	   Financial_Tariff.click();
 	   Thread.sleep(1000);
+	   driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+
    }
    public void Contract_Icon( WebDriver driver) throws InterruptedException {
 	   
@@ -235,7 +237,7 @@ public class PageObject_MainMenu {
 	   FinancialSettings.click();
 	   Thread.sleep(1000);
 	   Financial_RialiAdjustTriff.click();
-	   Thread.sleep(1000);
+	   Thread.sleep(7000);
    }
    public void FixedRialiAdjust_Icon( WebDriver driver) throws InterruptedException {
 	   

@@ -49,8 +49,7 @@ public class Entesab_TC {
 	  Thread.sleep(4000);
 	  
 	  
-	  driver.findElement(By.xpath("/html/body/app-root/div/app-layout/div/div/div[2]"
-	  		+ "/div/div[2]/his-home/div/div/div/div/nav/div/div[3]/a")).click();
+	  driver.findElement(By.xpath("//*[text()= 'مدیریت منابع انسانی']")).click();
 	  
 	  for(String window2 : driver.getWindowHandles()) {
 		  driver.switchTo().window(window2);

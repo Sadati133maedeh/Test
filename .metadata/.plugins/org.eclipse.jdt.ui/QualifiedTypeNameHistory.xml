@@ -15,10 +15,17 @@
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="GV.PageObject.PageObject_group_services"/>
+<<<<<<< HEAD
     <fullyQualifiedTypeName name="org.openqa.selenium.remote.SessionId"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.remote.RemoteWebDriver"/>
     <fullyQualifiedTypeName name="GV.PageObject.PageObject_center_services"/>
     <fullyQualifiedTypeName name="GV.PageObject.PageObject_tariff_type"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+=======
+    <fullyQualifiedTypeName name="GV.PageObject.PageObject_center_services"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.remote.SessionId"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.remote.RemoteWebDriver"/>
+    <fullyQualifiedTypeName name="GV.PageObject.PageObject_riali_K_tariff"/>
+>>>>>>> ec6daa5a444d7d2588aadc4eb82d90e773297051
     <fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
 </qualifiedTypeNameHistroy>
