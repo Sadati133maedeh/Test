@@ -26,7 +26,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 
-public class EditUser_TC {
+public class TC_EditUser {
 	WebDriver driver;
 	@DataProvider(name = "Edit")
 	public  Iterator<Object[]> Provider() throws IOException{

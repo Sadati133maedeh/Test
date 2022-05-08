@@ -36,7 +36,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
-public class Deactive_TC {
+public class TC_Deactive {
 	WebDriver driver;
 	@DataProvider(name = "deactive")
 	public Iterator<Object[]> Provider() throws IOException{

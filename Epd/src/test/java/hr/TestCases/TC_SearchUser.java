@@ -26,7 +26,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 
-public class SearchUser_TC {
+public class TC_SearchUser {
 	WebDriver driver;
 	@DataProvider(name = "search")
 	public Iterator<Object[]> Provider() throws IOException{

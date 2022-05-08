@@ -24,7 +24,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 
-public class AddUser_TC {
+public class TC_AddUser {
 	WebDriver driver;
 	@DataProvider(name = "ADD")
 	public Iterator<Object[]> Provider() throws IOException{

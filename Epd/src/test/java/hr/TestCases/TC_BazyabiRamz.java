@@ -25,7 +25,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 
-public class BazyabiRamz_TC {
+public class TC_BazyabiRamz {
 	WebDriver driver;
 	@DataProvider(name = "resetpass") 
 	public Iterator<Object[]> Provider() throws IOException{

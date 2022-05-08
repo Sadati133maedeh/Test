@@ -22,7 +22,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 
-public class Login_TC {
+public class TC_Login {
 	WebDriver driver;
 	
 	@DataProvider(name = "login")
