@@ -53,7 +53,7 @@ public class AddUser_TC {
 	  
 	  driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	  
-	  driver.findElement(By.xpath("//*[text() = 'مدیریت منابع انسانی']")).click();     //login to hr
+	  driver.findElement(By.xpath("//*[text() = 'مدیریت منابع انسانی']")).click();     //login to hr1
 	  
 	  for(String window : driver.getWindowHandles()) {
 		  driver.switchTo().window(window);
