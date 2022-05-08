@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -330,13 +331,13 @@ public class PageObject_riali_K_tariff {
 			   Thread.sleep(3000);
 			
 			   
-			   WebElement t= driver.findElement(By.xpath("//tr[1]/td[2]/descendant::i"));
+			   WebElement t= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][1]/td[2]/descendant::i"));
 			   action
 			   .click(t).perform();
 			   Thread.sleep(1000);
 
 			   //k زیرگروه خدمت تصویربرداری
-			   WebElement expand1_Tasvir= driver.findElement(By.xpath("//tr[2]/td[2]/descendant::i"));
+			   WebElement expand1_Tasvir= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][2]/td[2]/descendant::i"));
 			   action
 			   .click(expand1_Tasvir).perform();
 			   
@@ -392,14 +393,14 @@ public class PageObject_riali_K_tariff {
 			   .click(s)
 			   .sendKeys(Keys.PAGE_UP).perform();
 			   Thread.sleep(2000);
-			   WebElement d= driver.findElement(By.xpath("//tr[2]/td[2]/descendant::i"));
+			   WebElement d= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][2]/td[2]/descendant::i"));
 
 			   action
 			   .click(d).perform();
 			   Thread.sleep(1000);
 
 			   //k زیرگروه خدمت جراحی
-			   WebElement expand1_Jarahi= driver.findElement(By.xpath("//tr[3]/td[2]/descendant::i"));
+			   WebElement expand1_Jarahi= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][3]/td[2]/descendant::i"));
 			   action
 			   .click(expand1_Jarahi).perform();
 			   
@@ -419,7 +420,7 @@ public class PageObject_riali_K_tariff {
 			   action
 			   .click(expand2_Jarahi).perform();
 			   Thread.sleep(1000);
-			   WebElement z= driver.findElement(By.xpath("//tr[3]/td[3]"));
+			   WebElement z= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][3]/td[3]"));
 
 			   action
 			   .click(z)
@@ -464,9 +465,9 @@ public class PageObject_riali_K_tariff {
 			   .sendKeys(h_fani_Jarahi_Taz)
 			   .perform();
 
-			   WebElement Saveh_Jarahi_Taz= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][2]/following-sibling::tr[2]/td[10]/div[1]"));
+			   WebElement Save_Jarahi_Taz= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][3]/following-sibling::tr[4]/td[10]/div[1]"));
 			   action
-			   .click(Saveh_Jarahi_Taz).perform();
+			   .click(Save_Jarahi_Taz).perform();
 			   Thread.sleep(3000);
 			   
 			   WebElement y= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][3]/following-sibling::tr[@class='true background-lvl-4 ng-star-inserted']/td[3]"));
@@ -509,17 +510,20 @@ public class PageObject_riali_K_tariff {
 				   Thread.sleep(2000);
 
 
-				   WebElement K_herfeyi_Tebi_td_en= driver.findElement(By.xpath("//tr[4]/td[3]"));
+				   WebElement K_herfeyi_Tebi_td_en= driver.findElement(By.xpath("//tr[3]/td[3]"));
 
 				   String AddedK_herfeyi_td1 = K_herfeyi_Tebi_td_en.getText();
 				   Assert.assertEquals(AddedK_herfeyi_td1, k_herfeyi_Tebi_en);
 				   eh.highlightElement(driver,K_herfeyi_Tebi_td_en); 
+				   
+				   WebElement t2= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][1]/td[2]/descendant::i"));
 				   action
-				   .click(expand2_Tebi).perform();
+				   .click(t2).perform();
+				   Thread.sleep(1000);
 
 
 			    // چک ثبت تصویربرداری
-				   WebElement expand2_Tasvir= driver.findElement(By.xpath("//tr[2]/td[2]/descendant::i"));
+				   WebElement expand2_Tasvir= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][2]/td[2]/descendant::i"));
 				   action
 				   .click(expand2_Tasvir).perform();
 				   
@@ -533,6 +537,11 @@ public class PageObject_riali_K_tariff {
 				   action
 				   .sendKeys(Keys.ENTER).perform();
 				   Thread.sleep(2000);
+				   
+				   action
+				   .sendKeys(Keys.PAGE_DOWN).perform();
+				   Thread.sleep(2000);
+
 
 
 				   WebElement K_herfeyi_Tasvir_td_mri= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][2]/following-sibling::tr[2]/td[3]"));
@@ -540,12 +549,22 @@ public class PageObject_riali_K_tariff {
 				   String AddedK_herfeyi_td2 = K_herfeyi_Tasvir_td_mri.getText();
 				   Assert.assertEquals(AddedK_herfeyi_td2, k_herfeyi_Tasvir_mri);
 				   eh.highlightElement(driver,K_herfeyi_Tasvir_td_mri); 
+				   
+				   WebElement b= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][2]/following-sibling::tr[2]/td[3]"));
+
 				   action
-				   .click(expand2_Tasvir).perform();
+				   .click(b)
+				   .sendKeys(Keys.PAGE_UP).perform();
+				   Thread.sleep(2000);
+				   WebElement m= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][2]/td[2]/descendant::i"));
+
+				   action
+				   .click(m).perform();
+				   Thread.sleep(1000);
 
 			    // چک ثبت جراحی
 				   
-				   WebElement expand5_Jarahi= driver.findElement(By.xpath("//tr[3]/td[2]/descendant::i"));
+				   WebElement expand5_Jarahi= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][3]/td[2]/descendant::i"));
 				   action
 				   .click(expand5_Jarahi).perform();
 				   
@@ -565,26 +584,42 @@ public class PageObject_riali_K_tariff {
 				   action
 				   .click(expand6_Jarahi).perform();
 				   Thread.sleep(1000);
+				   
+
 				   WebElement expand7_Jarahi= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][3]/following-sibling::tr[@class='true background-lvl-2 ng-star-inserted']/td[2]/descendant::i"));
 				   action
 				   .click(expand7_Jarahi).perform();
 				   Thread.sleep(1000);
+				   
+				   WebElement n= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][3]/td[3]"));
+
+				   action
+				   .click(n)
+				   .sendKeys(Keys.PAGE_DOWN).perform();
+				   Thread.sleep(1000);
+
 				   WebElement expand8_Jarahi= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][3]/following-sibling::tr[@class='true background-lvl-3 ng-star-inserted']/td[2]/descendant::i"));
 				   action
 				   .click(expand8_Jarahi).perform();
 				   Thread.sleep(1000);
 
-				   WebElement K_herfeyi_Jarahi_td_taz= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][3]/following-sibling::tr[@class='true background-lvl-4 ng-star-inserted']/td[3]"));
+				   WebElement K_herfeyi_Jarahi_td_taz= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][3]/following-sibling::tr[@class='true background-lvl-4 ng-star-inserted'][1]/td[3]/db-tree-cell"));
 
 				   String AddedK_herfeyi_td3 = K_herfeyi_Jarahi_td_taz.getText();
 				   Assert.assertEquals(AddedK_herfeyi_td3, k_herfeyi_Jarahi_Taz);
 				   eh.highlightElement(driver,K_herfeyi_Jarahi_td_taz); 
+				   
+				   
+				   WebElement l= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][3]/following-sibling::tr[@class='true background-lvl-4 ng-star-inserted']/td[3]"));
 				   action
-				   .click(expand5_Jarahi).perform();
+				   .click(l)
+				   .sendKeys(Keys.PAGE_UP).perform();
+				   Thread.sleep(1000);
+
 
 			   // چک ثبت داخلی
 				   
-				   WebElement expand1_dakheli1= driver.findElement(By.xpath("//tr[4]/td[2]/descendant::i"));
+				   WebElement expand1_dakheli1= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][4]/td[2]/descendant::i"));
 				   action
 				   .click(expand1_dakheli1).perform();
 				   
@@ -598,9 +633,15 @@ public class PageObject_riali_K_tariff {
 				   action
 				   .sendKeys(Keys.ENTER).perform();
 				   Thread.sleep(2000);
+				   
+				   action
+				   .click()
+				   .sendKeys(Keys.PAGE_DOWN).perform();
+				   Thread.sleep(1000);
 
 
-				   WebElement K_herfeyi_Dakheli_td_al= driver.findElement(By.xpath("//tr[6]/td[3]"));
+
+				   WebElement K_herfeyi_Dakheli_td_al= driver.findElement(By.xpath("//*[contains(@class,'lvl-0')][4]/following-sibling::tr[2]/td[3]"));
 
 				   String AddedK_herfeyi_al = K_herfeyi_Dakheli_td_al.getText();
 				   Assert.assertEquals(AddedK_herfeyi_al, k_herfeyi_Dakheli_al);
@@ -613,29 +654,124 @@ public class PageObject_riali_K_tariff {
 
 	}
 	   
-	   public void Edit_Tariff( WebDriver driver ,String Newtariff ,String tariff2) throws InterruptedException {
+	   public void Edit_Tariff_k ( WebDriver driver ,String Newtariff ,String tariff) throws InterruptedException {
 		   Actions action = new Actions(driver);
-//		   WebElement FirstTrTariff=driver.findElement(By.xpath("//tbody/tr/td[2]"));
-//		   WebElement FirstPenTariff=driver.findElement(By.xpath("//mat-icon[text()='edit']"));
-//		   WebElement EditButton1 =driver.findElement(By.xpath("//button[text()='ویرایش']"));
-//		   action
-//		   .click(SearchTariff)
-//		   .sendKeys(tariff2)
-//		   .click(SearchButton)
-//		   .click(FirstPenTariff)
-//		   .click(TarrifeName)
-//		   .perform();
-//		   TarrifeName.clear();
-//		   Thread.sleep(1000);
-//		   action
-//		   .click(TarrifeName)
-//		   .sendKeys(Newtariff)
-//		   .click(EditButton1)
-//		   .perform();
-//		   Thread.sleep(1000);
-//		   String EditedTarrif= FirstTrTariff.getText();
-//		   Assert.assertEquals(EditedTarrif, Newtariff);
+		   //ادیت تعرفه جرااحی
+		   action
+		   .click(TarrifeType).perform();
+		   Thread.sleep(1000);
+		   action
+		  .sendKeys(tariff).perform();
+		   Thread.sleep(1000);
+		   action
+		   .sendKeys(Keys.ENTER).perform();
+		   Thread.sleep(1000);
 
+		   WebElement EditJarahi1= driver.findElement(By.xpath("//tr[3]/td[10]/div[1]"));
+
+		   action
+		   .click(EditJarahi1).perform();
+		   Thread.sleep(1000);
+		   
+		   WebElement K_herfeyi_Jarahi= driver.findElement(By.xpath("//tr[3]/td[3]/descendant::input"));
+		   action
+		   .click(K_herfeyi_Jarahi)
+		   .sendKeys(Keys.HOME)
+		   .sendKeys(Keys.DELETE)
+		   .sendKeys(Keys.DELETE)
+		   .sendKeys(Keys.DELETE)
+		   .sendKeys(Keys.DELETE)
+		   .sendKeys(Newtariff)
+		   .perform();
+		   Thread.sleep(2000);
+		   WebElement EditJarahi2= driver.findElement(By.xpath("//tr[3]/td[10]/div[1]"));
+
+		   action
+		   .click(EditJarahi2).perform();
+		   Thread.sleep(1000);
+		  
+		   
+		   //رفرش صفحه
+		   driver.navigate().refresh();
+			  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS); 
+			   Thread.sleep(2000);
+			   action
+			   .click(TarrifeType).perform();
+			   Thread.sleep(1000);
+			   action
+			  .sendKeys(tariff).perform();
+			   Thread.sleep(1000);
+			   action
+			   .sendKeys(Keys.ENTER).perform();
+			   Thread.sleep(1000);
+			   //چک ادیت تعرفه جراحی
+			   WebElement K_herfeyi_Jarahi_td= driver.findElement(By.xpath("//tr[3]/td[3]"));
+			   String EditedK_herfeyi_jarahi = K_herfeyi_Jarahi_td.getText();
+			   Assert.assertEquals(EditedK_herfeyi_jarahi, Newtariff);
+			   eh.highlightElement(driver,K_herfeyi_Jarahi_td); 
+
+
+		   
 	}
+	   
+	   public void Delete_Tariff_k ( WebDriver driver,String tariff,String contract ) throws InterruptedException {
+		   Actions action = new Actions(driver);
+		   action
+		   .click(TarrifeType).perform();
+		   Thread.sleep(1000);
+		   action
+		  .sendKeys(tariff).perform();
+		   Thread.sleep(1000);
+		   action
+		   .sendKeys(Keys.ENTER).perform();
+		   Thread.sleep(1000);
+		   
+		   WebElement DeleteTariffK= driver.findElement(By.xpath("//tr[1]/td[10]/div[2]"));
+		   action
+		   .click(DeleteTariffK)
+		   .perform();
+		   Thread.sleep(1000);
+		   
+		   WebElement YesKeyDeleteTariffK= driver.findElement(By.xpath("//button[text()='بله']"));
+		   action
+		   .click(YesKeyDeleteTariffK)
+		   .perform();
+		   Thread.sleep(5000);
+		   // چک کردن حذف تعرفه گروه اصلی
+		   WebElement K_herfeyi_Tebi_td= driver.findElement(By.xpath("//tr[1]/td[3]"));
 
+		   String AddedK_herfeyi2 = K_herfeyi_Tebi_td.getText();
+		   Assert.assertEquals(AddedK_herfeyi2, "");
+		   eh.highlightElement(driver,K_herfeyi_Tebi_td); 
+		   
+		   // چک کردن حذف تعرفه زیر گروه
+		   WebElement expand2_Tebi= driver.findElement(By.xpath("//tr[1]/td[2]/descendant::i"));
+		   action
+		   .click(expand2_Tebi).perform();
+		   
+		   WebElement ContractName5= driver.findElement(By.xpath("(//mat-select[@role='combobox'])[2]"));
+		   action
+		   .click(ContractName5).perform();
+		   Thread.sleep(1000);
+		   action
+		   .sendKeys(contract).perform();
+		   Thread.sleep(1000);
+		   action
+		   .sendKeys(Keys.ENTER).perform();
+		   Thread.sleep(2000);
+
+
+		   WebElement K_herfeyi_Tebi_td_en= driver.findElement(By.xpath("//tr[3]/td[3]"));
+
+		   String AddedK_herfeyi_td1 = K_herfeyi_Tebi_td_en.getText();
+		   Assert.assertEquals(AddedK_herfeyi_td1, "");
+		   eh.highlightElement(driver,K_herfeyi_Tebi_td_en); 
+
+
+		   
+		   
+
+		   
+
+	   }
 }

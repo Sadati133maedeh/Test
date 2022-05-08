@@ -3,13 +3,13 @@
 <suite thread-count="-1" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="GV.TestCases.TestCase_AddK">
+      <class name="GV.TestCases.TestCase_EditeTariffK">
         <methods>
           <include name="afterMethod"/>
-          <include name="f" invocation-numbers="0"/>
           <include name="beforeMethod"/>
+          <include name="f" invocation-numbers="0"/>
         </methods>
-      </class> <!-- GV.TestCases.TestCase_AddK -->
+      </class> <!-- GV.TestCases.TestCase_EditeTariffK -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
