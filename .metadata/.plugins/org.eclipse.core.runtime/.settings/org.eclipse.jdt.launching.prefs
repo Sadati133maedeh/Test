@@ -2,4 +2,4 @@
 <<<<<<<=HEAD
 >>>>>>>=14bef7bb1fa62391ffabffa46ac639b696ade406
 eclipse.preferences.version=1
-org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1651917372452" defaultVMConnector\="">\r\n    <vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n        <vm id\="1651380336970" name\="jdk-16.0.1" path\="C\:\\Program Files\\Java\\jdk-16.0.1"/>\r\n        <vm id\="1651917372452" name\="jdk-15.0.1" path\="C\:\\Program Files\\Java\\jdk-15.0.1"/>\r\n    </vmType>\r\n</vmSettings>\r\n
+org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1651917372452" defaultVMConnector\="">\r\n    <vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n        <vm id\="1651917372452" name\="jdk-15.0.1" path\="C\:\\Program Files\\Java\\jdk-15.0.1"/>\r\n    </vmType>\r\n</vmSettings>\r\n
