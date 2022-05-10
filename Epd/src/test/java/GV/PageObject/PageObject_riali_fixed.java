@@ -554,10 +554,79 @@ public class PageObject_riali_fixed {
 
 	   }
 	   
-	   public void DeleteFixPrice ( WebDriver driver,String mainGroup,String herfeyi ,String fani,String fulltime,String tariff,String contract) throws InterruptedException {
+	   public void DeleteFixPrice ( WebDriver driver,String mainGroup) throws InterruptedException {
 		   
 		   Actions action = new Actions(driver);
 		   
+		   action
+		   .click(Show).perform();
+		   Thread.sleep(500);
+		   action
+		   .click(ShowMainGroupServices).perform();
+		   Thread.sleep(1000);
+		   action
+		   .sendKeys(mainGroup).perform();
+		   Thread.sleep(500);
+		   action
+		   .sendKeys(Keys.ENTER).perform();
+		   Thread.sleep(500);
 		   
+		   WebElement DeleteButtonRow1 =driver.findElement(By.xpath("//mat-row[1]/mat-cell[10]/button[2]"));
+		   WebElement Row1Td2ServiceName =driver.findElement(By.xpath("//mat-row[1]/mat-cell[2]"));
+		   
+		   String deletedServisName=Row1Td2ServiceName.getText();
+		   
+		   action
+		   .click(DeleteButtonRow1).perform();
+		   Thread.sleep(1000);
+		   
+		   WebElement POPUP =driver.findElement(By.xpath("//div[@role='alertdialog']"));
+		   Thread.sleep(500);
+		   String c=POPUP.getText();
+	       Assert.assertTrue(c.contains("موفقیت"));
+		   eh.highlightElement(driver,POPUP); 
+		   Thread.sleep(500);
+		   
+		   driver.navigate().refresh();
+			  driver.manage().timeouts().implicitlyWait(11, TimeUnit.SECONDS); 
+			   Thread.sleep(2000);
+			   
+			   action
+			   .click(Add).perform();
+			   Thread.sleep(500);
+			   action
+			   .click(AddMainGroupServices).perform();
+			   Thread.sleep(1000);
+			   action
+			   .sendKeys(mainGroup).perform();
+			   Thread.sleep(500);
+			   action
+			   .sendKeys(Keys.ENTER).perform();
+			   Thread.sleep(500);
+			   action
+			   .click(AddSearchServiceName)
+			   .sendKeys(deletedServisName)
+			   .click(AddSearch).perform();
+			   
+			   WebElement FindeServiceNameRow1 =driver.findElement(By.xpath("//mat-row[1]/mat-cell[1]"));
+			   String findeServiceNameRow1= FindeServiceNameRow1.getText(); 
+			   Assert.assertEquals(findeServiceNameRow1, deletedServisName);
+			   eh.highlightElement(driver,FindeServiceNameRow1); 
+			   
+			   WebElement FindeRow1Td6 =driver.findElement(By.xpath("//mat-row[1]/mat-cell[6]"));
+			   String findeRow1Td6= FindeRow1Td6.getText(); 
+			   Assert.assertEquals(findeRow1Td6, "");
+			   eh.highlightElement(driver,FindeRow1Td6); 
+			   
+			   WebElement FindeRow1Td7 =driver.findElement(By.xpath("//mat-row[1]/mat-cell[7]"));
+			   String findeRow1Td7= FindeRow1Td7.getText(); 
+			   Assert.assertEquals(findeRow1Td7, "");
+			   eh.highlightElement(driver,FindeRow1Td7); 
+
+			   WebElement FindeRow1Td8 =driver.findElement(By.xpath("//mat-row[1]/mat-cell[8]"));
+			   String findeRow1Td8= FindeRow1Td8.getText(); 
+			   Assert.assertEquals(findeRow1Td8, "");
+			   eh.highlightElement(driver,FindeRow1Td8); 
+
 	   }
 }
